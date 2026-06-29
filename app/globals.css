@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/**
+ * Semantic colour tokens — "Agriculture / Farm Tech" green palette.
+ * Edit these to re-theme the entire site.
+ */
+:root {
+  --color-primary: #15803d; /* deep forest green */
+  --color-on-primary: #ffffff;
+  --color-secondary: #22c55e; /* fresh organic green */
+  --color-accent: #a16207; /* harvest gold (WCAG-safe) */
+  --color-on-accent: #ffffff;
+  --color-background: #f0fdf4; /* mint white */
+  --color-foreground: #14532d; /* deep green text */
+  --color-card: #ffffff;
+  --color-muted: #e8f0f1;
+  --color-muted-foreground: #4b6358;
+  --color-border: #bbf7d0;
+  --color-destructive: #dc2626;
+}
+
+@layer base {
+  * {
+    @apply border-line;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading;
+  }
+
+  /* Visible, on-brand focus ring for keyboard users */
+  :focus-visible {
+    @apply outline-none ring-2 ring-primary ring-offset-2 ring-offset-background;
+  }
+
+  /* Respect users who prefer reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-6 py-3 text-base font-semibold transition-all duration-200 focus-visible:ring-2 focus-visible:ring-offset-2;
+  }
+  .btn-primary {
+    @apply btn bg-primary text-primary-foreground shadow-card hover:bg-brand-800 hover:shadow-card-hover active:scale-[0.98];
+  }
+  .btn-accent {
+    @apply btn bg-accent text-accent-foreground shadow-card hover:bg-harvest-700 hover:shadow-card-hover active:scale-[0.98];
+  }
+  .btn-outline {
+    @apply btn border-2 border-primary bg-transparent text-primary hover:bg-brand-50 active:scale-[0.98];
+  }
+}
