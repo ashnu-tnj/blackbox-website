@@ -7,17 +7,17 @@
  * Edit these to re-theme the entire site.
  */
 :root {
-  --color-primary: #15803d; /* deep forest green */
+  --color-primary: #4a7043; /* fern green (business-card tone) */
   --color-on-primary: #ffffff;
-  --color-secondary: #22c55e; /* fresh organic green */
-  --color-accent: #a16207; /* harvest gold (WCAG-safe) */
+  --color-secondary: #6f9e50; /* sage green */
+  --color-accent: #a16207; /* harvest gold (WCAG-safe) — CTA accent */
   --color-on-accent: #ffffff;
-  --color-background: #f0fdf4; /* mint white */
-  --color-foreground: #14532d; /* deep green text */
+  --color-background: #f3f7ed; /* light sage cream */
+  --color-foreground: #2c3e2c; /* deep olive-green text */
   --color-card: #ffffff;
-  --color-muted: #e8f0f1;
-  --color-muted-foreground: #4b6358;
-  --color-border: #bbf7d0;
+  --color-muted: #e5efd6;
+  --color-muted-foreground: #566953;
+  --color-border: #cbe0b3;
   --color-destructive: #dc2626;
 }
 

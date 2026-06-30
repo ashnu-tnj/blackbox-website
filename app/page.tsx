@@ -16,7 +16,15 @@ function StructuredData() {
     description: company.shortDescription,
     url: "https://blackboxtraders.in",
     email: company.email,
-    address: { "@type": "PostalAddress", addressRegion: company.location, addressCountry: "IN" },
+    telephone: company.phone,
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "S-16, SIDCO Industrial Estate, Nanjikottai Road",
+      addressLocality: "Thanjavur",
+      postalCode: "613007",
+      addressRegion: "Tamil Nadu",
+      addressCountry: "IN",
+    },
     sameAs: [company.indiamartUrl],
     taxID: company.gstin,
   };

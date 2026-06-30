@@ -42,12 +42,21 @@ export function Footer() {
               Get in touch
             </h3>
             <ul className="mt-4 space-y-2 text-sm text-brand-100/90">
+              <li className="font-medium text-brand-100">{company.contactPerson}</li>
+              <li>
+                <a
+                  href={`tel:${company.phone.replace(/\s+/g, "")}`}
+                  className="hover:text-white"
+                >
+                  {company.phone}
+                </a>
+              </li>
               <li>
                 <a href={`mailto:${company.email}`} className="hover:text-white">
                   {company.email}
                 </a>
               </li>
-              <li>{company.location}</li>
+              <li className="text-brand-100/70">{company.address}</li>
               <li>
                 <a
                   href={company.indiamartUrl}

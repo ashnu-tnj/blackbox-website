@@ -12,10 +12,13 @@ export const company = {
   fssai: "12421999000538",
   // Verified marketplace presence
   indiamartUrl: "https://www.indiamart.com/blackbox-traders/",
-  // Contact — update with live details
-  email: "exports@blackboxtraders.in",
-  phone: "+91-00000-00000",
-  location: "Tamil Nadu, India",
+  // Contact
+  contactPerson: "Mohamed Ashfaaq",
+  email: "blackboxtraders@hotmail.com",
+  phone: "+91 98940 43632",
+  location: "Thanjavur, Tamil Nadu, India",
+  address:
+    "S-16, SIDCO Industrial Estate, Nanjikottai Road, Thanjavur 613007, Tamil Nadu, India",
 } as const;
 
 /** Headline metrics shown as trust signals. */
