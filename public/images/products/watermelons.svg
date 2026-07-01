@@ -1,29 +1,29 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" role="img" aria-label="Illustration of watermelons">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" role="img" aria-label="Engraving of watermelons">
   <defs>
-    <linearGradient id="wmbg" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#EAF1DE"/>
-      <stop offset="1" stop-color="#F3F7ED"/>
-    </linearGradient>
+    <pattern id="hw" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#33452F" stroke-width="1" opacity="0.5"/>
+    </pattern>
+    <pattern id="hw2" width="6" height="6" patternTransform="rotate(-45)" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#33452F" stroke-width="1" opacity="0.4"/>
+    </pattern>
   </defs>
-  <rect width="480" height="360" fill="url(#wmbg)"/>
-  <circle cx="240" cy="170" r="120" fill="#DCE9C6" opacity="0.7"/>
-  <ellipse cx="240" cy="288" rx="130" ry="22" fill="#3A5A40" opacity="0.12"/>
-  <!-- whole watermelon -->
-  <g transform="translate(312,196)">
-    <circle r="78" fill="#3A5A40"/>
-    <g stroke="#6F9E50" stroke-width="10" fill="none" opacity="0.9">
-      <path d="M-58 -52 Q-30 0 -58 52"/>
-      <path d="M-20 -74 Q0 0 -20 74"/>
-      <path d="M20 -74 Q0 0 20 74"/>
-      <path d="M58 -52 Q30 0 58 52"/>
+  <rect width="480" height="360" fill="#F1ECDB"/>
+  <rect x="14" y="14" width="452" height="332" fill="none" stroke="#CFC7AC" stroke-width="1.5"/>
+  <rect x="20" y="20" width="440" height="320" fill="none" stroke="#CFC7AC" stroke-width="1"/>
+  <!-- whole melon -->
+  <g transform="translate(316,196)" stroke="#33452F" stroke-width="2.4" stroke-linejoin="round">
+    <circle r="74" fill="#EFE9D4"/>
+    <g fill="none" stroke-width="2" opacity="0.85">
+      <path d="M-54 -50 Q-28 0 -54 50"/><path d="M-19 -70 Q0 0 -19 70"/><path d="M19 -70 Q0 0 19 70"/><path d="M54 -50 Q28 0 54 50"/>
     </g>
-    <ellipse cx="-26" cy="-30" rx="20" ry="12" fill="#8AB75D" opacity="0.5"/>
+    <path d="M0 -74 a74 74 0 0 1 0 148 a50 74 0 0 0 0 -148" fill="url(#hw)" stroke="none"/>
   </g>
   <!-- slice -->
-  <g transform="translate(180,200)">
-    <path d="M-96 0 A96 96 0 0 1 96 0 Z" fill="#3A5A40"/>
-    <path d="M-86 0 A86 86 0 0 1 86 0 Z" fill="#F1F6EA"/>
-    <path d="M-74 0 A74 74 0 0 1 74 0 Z" fill="#E8637A"/>
-    <g fill="#2C3E2C"><ellipse cx="-40" cy="-26" rx="5" ry="8"/><ellipse cx="-8" cy="-40" rx="5" ry="8"/><ellipse cx="28" cy="-34" rx="5" ry="8"/><ellipse cx="54" cy="-16" rx="5" ry="8"/><ellipse cx="-56" cy="-8" rx="5" ry="8"/><ellipse cx="12" cy="-12" rx="5" ry="8"/></g>
+  <g transform="translate(178,202)" stroke="#33452F" stroke-width="2.4" stroke-linejoin="round">
+    <path d="M-92 0 A92 92 0 0 1 92 0 Z" fill="#EFE9D4"/>
+    <path d="M-80 0 A80 80 0 0 1 80 0 Z" fill="#FBF8ED"/>
+    <path d="M-70 0 A70 70 0 0 1 70 0 Z" fill="url(#hw2)"/>
+    <path d="M-70 0 A70 70 0 0 1 70 0 Z" fill="none"/>
+    <g fill="#33452F" stroke="none"><ellipse cx="-38" cy="-24" rx="4.5" ry="7.5"/><ellipse cx="-8" cy="-38" rx="4.5" ry="7.5"/><ellipse cx="26" cy="-32" rx="4.5" ry="7.5"/><ellipse cx="52" cy="-15" rx="4.5" ry="7.5"/><ellipse cx="-54" cy="-7" rx="4.5" ry="7.5"/><ellipse cx="11" cy="-11" rx="4.5" ry="7.5"/></g>
   </g>
 </svg>

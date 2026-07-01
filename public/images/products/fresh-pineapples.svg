@@ -1,29 +1,25 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" role="img" aria-label="Illustration of fresh pineapple">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" role="img" aria-label="Engraving of a fresh pineapple">
   <defs>
-    <linearGradient id="pinebg" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#EAF1DE"/>
-      <stop offset="1" stop-color="#F3F7ED"/>
-    </linearGradient>
-    <linearGradient id="pinebody" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#E8B948"/>
-      <stop offset="1" stop-color="#C98A2B"/>
-    </linearGradient>
+    <pattern id="hpn" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#33452F" stroke-width="1" opacity="0.45"/>
+    </pattern>
   </defs>
-  <rect width="480" height="360" fill="url(#pinebg)"/>
-  <circle cx="240" cy="176" r="122" fill="#DCE9C6" opacity="0.7"/>
-  <ellipse cx="240" cy="300" rx="96" ry="18" fill="#3A5A40" opacity="0.12"/>
+  <rect width="480" height="360" fill="#F1ECDB"/>
+  <rect x="14" y="14" width="452" height="332" fill="none" stroke="#CFC7AC" stroke-width="1.5"/>
+  <rect x="20" y="20" width="440" height="320" fill="none" stroke="#CFC7AC" stroke-width="1"/>
   <!-- crown -->
-  <g fill="#4A7043">
-    <path d="M240 96 C232 60 218 44 210 34 C226 44 236 58 240 74 C244 58 254 44 270 34 C262 44 248 60 240 96Z"/>
-    <path d="M240 98 C224 70 206 62 190 58 C210 70 226 84 240 104 C254 84 270 70 290 58 C274 62 256 70 240 98Z" fill="#588157"/>
-    <path d="M240 104 C224 92 210 90 198 92 C214 100 228 112 240 120 C252 112 266 100 282 92 C270 90 256 92 240 104Z" fill="#6F9E50"/>
+  <g stroke="#33452F" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round" fill="#EFE9D4">
+    <path d="M240 118 C232 78 220 58 210 42 C230 54 240 72 244 96 C250 72 262 54 282 44 C268 62 250 80 246 118 Z"/>
+    <path d="M240 120 C222 92 202 80 184 74 C208 90 226 104 240 126 C256 104 278 88 300 76 C280 82 258 92 244 120 Z"/>
   </g>
   <!-- body -->
-  <ellipse cx="240" cy="210" rx="86" ry="98" fill="url(#pinebody)"/>
-  <!-- diamond lattice -->
-  <g stroke="#8A5E1E" stroke-width="3" opacity="0.55" fill="none">
-    <path d="M186 150 L294 240 M186 200 L280 274 M198 130 L300 200 M160 210 L250 280 M294 150 L186 240 M294 200 L200 274 M282 130 L180 200 M320 210 L230 280"/>
+  <g stroke="#33452F" stroke-width="2.4" stroke-linejoin="round">
+    <ellipse cx="240" cy="212" rx="82" ry="96" fill="#EFE9D4"/>
   </g>
-  <g fill="#F2D68A" opacity="0.8"><circle cx="220" cy="185" r="4"/><circle cx="255" cy="205" r="4"/><circle cx="230" cy="230" r="4"/><circle cx="268" cy="240" r="4"/><circle cx="205" cy="225" r="4"/></g>
-  <ellipse cx="205" cy="165" rx="22" ry="30" fill="#F6DE9A" opacity="0.5"/>
+  <path d="M240 116 a82 96 0 0 1 0 192 a56 96 0 0 0 0 -192" fill="url(#hpn)"/>
+  <!-- diamond lattice -->
+  <g stroke="#33452F" stroke-width="1.5" fill="none" opacity="0.85">
+    <path d="M172 168 L308 256 M168 208 L300 288 M180 138 L312 218 M164 244 L262 300 M308 168 L172 256 M312 208 L180 288 M300 138 L168 218 M316 244 L218 300"/>
+  </g>
+  <g fill="#33452F" opacity="0.7"><circle cx="222" cy="188" r="3"/><circle cx="258" cy="206" r="3"/><circle cx="232" cy="232" r="3"/><circle cx="270" cy="244" r="3"/><circle cx="206" cy="228" r="3"/><circle cx="246" cy="262" r="3"/></g>
 </svg>

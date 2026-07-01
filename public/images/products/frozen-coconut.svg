@@ -1,27 +1,27 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" role="img" aria-label="Illustration of frozen coconut">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" role="img" aria-label="Engraving of frozen coconut">
   <defs>
-    <linearGradient id="fcbg" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#E4EEEE"/>
-      <stop offset="1" stop-color="#F1F6F0"/>
-    </linearGradient>
+    <pattern id="hf" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#33452F" stroke-width="1" opacity="0.45"/>
+    </pattern>
   </defs>
-  <rect width="480" height="360" fill="url(#fcbg)"/>
-  <circle cx="240" cy="170" r="120" fill="#D6E7DE" opacity="0.7"/>
-  <ellipse cx="240" cy="288" rx="120" ry="20" fill="#3A5A40" opacity="0.10"/>
-  <!-- coconut half: shell + white flesh -->
-  <circle cx="240" cy="178" r="96" fill="#6B4326"/>
-  <circle cx="240" cy="178" r="96" fill="#9AC7E0" opacity="0.18"/>
-  <circle cx="240" cy="178" r="80" fill="#5A3B26"/>
-  <circle cx="240" cy="178" r="72" fill="#FBFDFB"/>
-  <circle cx="240" cy="178" r="72" fill="#CFE6F1" opacity="0.35"/>
-  <ellipse cx="216" cy="150" rx="26" ry="16" fill="#FFFFFF" opacity="0.7"/>
-  <!-- frost specks on flesh -->
-  <g fill="#BFE0EF"><circle cx="262" cy="196" r="4"/><circle cx="228" cy="206" r="3.5"/><circle cx="256" cy="162" r="3"/></g>
-  <!-- snowflakes -->
-  <g stroke="#7FB6D4" stroke-width="3" stroke-linecap="round">
-    <g transform="translate(118,120)"><path d="M0 -16V16M-14 -8L14 8M-14 8L14 -8"/></g>
-    <g transform="translate(360,132)"><path d="M0 -14V14M-12 -7L12 7M-12 7L12 -7"/></g>
-    <g transform="translate(348,238)"><path d="M0 -12V12M-10 -6L10 6M-10 6L10 -6"/></g>
-    <g transform="translate(128,236)"><path d="M0 -11V11M-9 -5L9 5M-9 5L9 -5"/></g>
+  <rect width="480" height="360" fill="#F1ECDB"/>
+  <rect x="14" y="14" width="452" height="332" fill="none" stroke="#CFC7AC" stroke-width="1.5"/>
+  <rect x="20" y="20" width="440" height="320" fill="none" stroke="#CFC7AC" stroke-width="1"/>
+  <!-- coconut half: concentric shell + flesh -->
+  <g stroke="#33452F" stroke-width="2.4" stroke-linejoin="round" fill="none">
+    <circle cx="240" cy="184" r="92" fill="#EFE9D4"/>
+    <circle cx="240" cy="184" r="76" fill="#33452F" opacity="0.12"/>
+    <circle cx="240" cy="184" r="76"/>
+    <circle cx="240" cy="184" r="66" fill="#FBF8ED"/>
+  </g>
+  <path d="M240 118 a66 66 0 0 1 0 132 a44 66 0 0 0 0 -132" fill="url(#hf)"/>
+  <!-- frost specks -->
+  <g fill="#33452F" opacity="0.55"><circle cx="262" cy="200" r="3"/><circle cx="226" cy="210" r="2.6"/><circle cx="256" cy="164" r="2.4"/></g>
+  <!-- snowflakes (line) -->
+  <g stroke="#33452F" stroke-width="1.8" stroke-linecap="round" opacity="0.8">
+    <g transform="translate(96,110)"><path d="M0 -15V15M-13 -7.5L13 7.5M-13 7.5L13 -7.5"/><path d="M-4 -11l4 3l4 -3M-4 11l4 -3l4 3"/></g>
+    <g transform="translate(384,124)"><path d="M0 -13V13M-11 -6.5L11 6.5M-11 6.5L11 -6.5"/></g>
+    <g transform="translate(372,244)"><path d="M0 -11V11M-9.5 -5.5L9.5 5.5M-9.5 5.5L9.5 -5.5"/></g>
+    <g transform="translate(104,248)"><path d="M0 -12V12M-10 -6L10 6M-10 6L10 -6"/></g>
   </g>
 </svg>
