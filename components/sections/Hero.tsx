@@ -78,6 +78,18 @@ export function Hero() {
             </div>
           ))}
         </dl>
+
+        {/* Trade scene banner */}
+        <div className="mx-auto mt-14 max-w-5xl overflow-hidden rounded-2xl border border-brand-200 shadow-card">
+          <img
+            src="/images/hero-trade.svg"
+            alt="Cargo ship carrying stacked containers across the sea — BlackBox Traders' global agricultural exports"
+            width={1200}
+            height={460}
+            className="h-auto w-full"
+            fetchPriority="high"
+          />
+        </div>
       </Container>
     </section>
   );

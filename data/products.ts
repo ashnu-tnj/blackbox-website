@@ -7,6 +7,8 @@ export type Product = {
   name: string;
   category: "Coconut Products" | "Fresh Fruits";
   description: string;
+  /** Illustration shown on the product card (path under /public). */
+  image: string;
   /** Optional trade specifications (moisture, grading, packing, etc.). */
   specs?: { label: string; value: string }[];
 };
@@ -16,6 +18,7 @@ export const products: Product[] = [
     slug: "coconuts",
     name: "Semi-Husked Coconuts",
     category: "Coconut Products",
+    image: "/images/products/coconuts.svg",
     description:
       "Mature, semi-husked coconuts selected for export weight and water content, packed for long-haul freight.",
     specs: [
@@ -28,6 +31,7 @@ export const products: Product[] = [
     slug: "desiccated-coconut",
     name: "Desiccated Coconut (DC)",
     category: "Coconut Products",
+    image: "/images/products/desiccated-coconut.svg",
     description:
       "High-grade desiccated coconut powder, hygienically processed for confectionery and food manufacturing.",
     specs: [
@@ -40,6 +44,7 @@ export const products: Product[] = [
     slug: "frozen-coconut",
     name: "Frozen Coconut",
     category: "Coconut Products",
+    image: "/images/products/frozen-coconut.svg",
     description:
       "IQF frozen coconut meat and kernels, cold-chain handled to retain freshness and texture in transit.",
     specs: [
@@ -52,6 +57,7 @@ export const products: Product[] = [
     slug: "copra",
     name: "Copra",
     category: "Coconut Products",
+    image: "/images/products/copra.svg",
     description:
       "Sun-dried and milling-grade copra for oil extraction, sorted for uniform moisture and quality.",
     specs: [
@@ -64,6 +70,7 @@ export const products: Product[] = [
     slug: "fresh-pineapples",
     name: "Fresh Pineapples",
     category: "Fresh Fruits",
+    image: "/images/products/fresh-pineapples.svg",
     description:
       "Export-grade fresh pineapples — the product behind our pioneering India-to-UAE sea shipment.",
     specs: [
@@ -76,6 +83,7 @@ export const products: Product[] = [
     slug: "watermelons",
     name: "Watermelons",
     category: "Fresh Fruits",
+    image: "/images/products/watermelons.svg",
     description:
       "Field-fresh watermelons graded for sweetness and size, cold-chain handled for export markets.",
     specs: [

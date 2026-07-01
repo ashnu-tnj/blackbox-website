@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" role="img" aria-label="Illustration of desiccated coconut in a bowl">
+  <defs>
+    <linearGradient id="dcbg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#EAF1DE"/>
+      <stop offset="1" stop-color="#F3F7ED"/>
+    </linearGradient>
+  </defs>
+  <rect width="480" height="360" fill="url(#dcbg)"/>
+  <circle cx="240" cy="170" r="120" fill="#DCE9C6" opacity="0.7"/>
+  <ellipse cx="240" cy="290" rx="126" ry="20" fill="#3A5A40" opacity="0.12"/>
+  <!-- bowl -->
+  <path d="M138 196 A102 102 0 0 0 342 196 Z" fill="#4A7043"/>
+  <path d="M150 200 A90 90 0 0 0 330 200 Z" fill="#3A5A40" opacity="0.5"/>
+  <ellipse cx="240" cy="196" rx="102" ry="22" fill="#6F9E50"/>
+  <ellipse cx="240" cy="196" rx="86" ry="16" fill="#3A5A40" opacity="0.35"/>
+  <!-- mound of desiccated coconut -->
+  <path d="M166 198 Q186 150 224 160 Q244 138 268 158 Q306 150 316 198 Z" fill="#FBFDF7"/>
+  <path d="M166 198 Q186 150 224 160 Q244 138 268 158 Q306 150 316 198 Z" fill="#DCE4D2" opacity="0.35"/>
+  <g stroke="#C9D6BB" stroke-width="3" stroke-linecap="round" opacity="0.8">
+    <path d="M188 186 l14 -3"/><path d="M214 176 l16 -1"/><path d="M244 172 l16 2"/>
+    <path d="M270 178 l15 3"/><path d="M200 194 l13 0"/><path d="M232 190 l15 1"/><path d="M262 192 l14 -1"/>
+  </g>
+  <g fill="#FFFFFF"><circle cx="150" cy="228" r="4"/><circle cx="330" cy="232" r="4"/><circle cx="176" cy="248" r="3.5"/><circle cx="308" cy="250" r="3.5"/></g>
+</svg>

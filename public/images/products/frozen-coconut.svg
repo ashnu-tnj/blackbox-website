@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" role="img" aria-label="Illustration of frozen coconut">
+  <defs>
+    <linearGradient id="fcbg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#E4EEEE"/>
+      <stop offset="1" stop-color="#F1F6F0"/>
+    </linearGradient>
+  </defs>
+  <rect width="480" height="360" fill="url(#fcbg)"/>
+  <circle cx="240" cy="170" r="120" fill="#D6E7DE" opacity="0.7"/>
+  <ellipse cx="240" cy="288" rx="120" ry="20" fill="#3A5A40" opacity="0.10"/>
+  <!-- coconut half: shell + white flesh -->
+  <circle cx="240" cy="178" r="96" fill="#6B4326"/>
+  <circle cx="240" cy="178" r="96" fill="#9AC7E0" opacity="0.18"/>
+  <circle cx="240" cy="178" r="80" fill="#5A3B26"/>
+  <circle cx="240" cy="178" r="72" fill="#FBFDFB"/>
+  <circle cx="240" cy="178" r="72" fill="#CFE6F1" opacity="0.35"/>
+  <ellipse cx="216" cy="150" rx="26" ry="16" fill="#FFFFFF" opacity="0.7"/>
+  <!-- frost specks on flesh -->
+  <g fill="#BFE0EF"><circle cx="262" cy="196" r="4"/><circle cx="228" cy="206" r="3.5"/><circle cx="256" cy="162" r="3"/></g>
+  <!-- snowflakes -->
+  <g stroke="#7FB6D4" stroke-width="3" stroke-linecap="round">
+    <g transform="translate(118,120)"><path d="M0 -16V16M-14 -8L14 8M-14 8L14 -8"/></g>
+    <g transform="translate(360,132)"><path d="M0 -14V14M-12 -7L12 7M-12 7L12 -7"/></g>
+    <g transform="translate(348,238)"><path d="M0 -12V12M-10 -6L10 6M-10 6L10 -6"/></g>
+    <g transform="translate(128,236)"><path d="M0 -11V11M-9 -5L9 5M-9 5L9 -5"/></g>
+  </g>
+</svg>

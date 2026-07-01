@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" role="img" aria-label="Illustration of semi-husked coconuts">
+  <defs>
+    <linearGradient id="cocobg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#EAF1DE"/>
+      <stop offset="1" stop-color="#F3F7ED"/>
+    </linearGradient>
+    <radialGradient id="cocoball" cx="0.36" cy="0.32" r="0.85">
+      <stop offset="0" stop-color="#AE7A54"/>
+      <stop offset="0.55" stop-color="#8B5E3C"/>
+      <stop offset="1" stop-color="#5A3B26"/>
+    </radialGradient>
+  </defs>
+  <rect width="480" height="360" fill="url(#cocobg)"/>
+  <circle cx="240" cy="170" r="120" fill="#DCE9C6" opacity="0.7"/>
+  <ellipse cx="240" cy="286" rx="128" ry="22" fill="#3A5A40" opacity="0.12"/>
+  <circle cx="320" cy="196" r="72" fill="url(#cocoball)"/>
+  <g fill="#4A2E1C" opacity="0.7"><circle cx="320" cy="168" r="6"/><circle cx="303" cy="188" r="6"/><circle cx="335" cy="188" r="6"/></g>
+  <circle cx="196" cy="176" r="96" fill="url(#cocoball)"/>
+  <g stroke="#5A3B26" stroke-width="3.5" stroke-linecap="round" opacity="0.45" fill="none">
+    <path d="M132 132 Q196 176 132 220"/>
+    <path d="M160 108 Q222 176 160 244"/>
+    <path d="M232 108 Q286 176 232 244"/>
+    <path d="M258 130 Q300 176 258 220"/>
+  </g>
+  <g fill="#3F2917"><circle cx="196" cy="142" r="10"/><circle cx="168" cy="176" r="10"/><circle cx="220" cy="178" r="10"/></g>
+  <ellipse cx="162" cy="132" rx="30" ry="19" fill="#CA9670" opacity="0.5"/>
+</svg>

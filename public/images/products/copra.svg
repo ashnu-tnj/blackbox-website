@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" role="img" aria-label="Illustration of dried copra">
+  <defs>
+    <linearGradient id="coprabg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#EAF1DE"/>
+      <stop offset="1" stop-color="#F3F7ED"/>
+    </linearGradient>
+    <radialGradient id="cup" cx="0.4" cy="0.35" r="0.9">
+      <stop offset="0" stop-color="#E8D3AE"/>
+      <stop offset="1" stop-color="#CBB184"/>
+    </radialGradient>
+  </defs>
+  <rect width="480" height="360" fill="url(#coprabg)"/>
+  <circle cx="240" cy="170" r="120" fill="#DCE9C6" opacity="0.7"/>
+  <ellipse cx="240" cy="288" rx="128" ry="22" fill="#3A5A40" opacity="0.12"/>
+  <!-- back half -->
+  <g transform="translate(300,206) rotate(12)">
+    <path d="M-66 -6 A66 60 0 0 0 66 -6 A66 40 0 0 1 -66 -6 Z" fill="#7A5638"/>
+    <ellipse cx="0" cy="-6" rx="60" ry="30" fill="url(#cup)"/>
+    <ellipse cx="0" cy="-6" rx="46" ry="20" fill="#B79A6B" opacity="0.6"/>
+  </g>
+  <!-- front half -->
+  <g transform="translate(186,196) rotate(-10)">
+    <path d="M-80 -8 A80 72 0 0 0 80 -8 A80 48 0 0 1 -80 -8 Z" fill="#6B4A30"/>
+    <ellipse cx="0" cy="-8" rx="74" ry="36" fill="url(#cup)"/>
+    <ellipse cx="0" cy="-8" rx="58" ry="26" fill="#BBA06F" opacity="0.55"/>
+    <ellipse cx="-18" cy="-18" rx="20" ry="10" fill="#F0E2C6" opacity="0.7"/>
+  </g>
+  <!-- dried texture flecks -->
+  <g fill="#8A6A44" opacity="0.5"><circle cx="176" cy="196" r="3"/><circle cx="200" cy="188" r="2.5"/><circle cx="158" cy="200" r="2.5"/><circle cx="300" cy="204" r="2.5"/><circle cx="322" cy="198" r="2.5"/></g>
+</svg>
