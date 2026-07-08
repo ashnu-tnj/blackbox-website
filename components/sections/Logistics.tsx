@@ -25,6 +25,7 @@ export function Logistics() {
     <section id="logistics" className="scroll-mt-20 bg-brand-900 py-20 text-brand-50 sm:py-24">
       <Container>
         <SectionHeading
+          index="02"
           eyebrow="Logistics & Innovation"
           title={<span className="text-white">Built for perishables, proven at sea</span>}
           intro={

@@ -46,6 +46,7 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   alternates: { canonical: "/" },
+  manifest: "/manifest.webmanifest",
 };
 
 export const viewport: Viewport = {

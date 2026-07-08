@@ -10,6 +10,7 @@ export function Credentials() {
       <Container>
         <SectionHeading
           centered
+          index="03"
           eyebrow="Credentials & Compliance"
           title="A verified, compliant export partner"
           intro="Registered with India's principal trade and food-safety authorities. Documents are available to verified buyers on request."

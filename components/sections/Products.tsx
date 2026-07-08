@@ -9,6 +9,7 @@ export function Products() {
       <Container>
         <SectionHeading
           centered
+          index="01"
           eyebrow="Our Products"
           title="Export-grade coconut products & fresh fruits"
           intro="A focused range, graded and packed to international standards. Specifications below are indicative — full spec sheets are shared on inquiry."
