@@ -22,41 +22,54 @@ const capabilities = [
 
 export function Logistics() {
   return (
-    <section id="logistics" className="scroll-mt-20 bg-brand-900 py-20 text-brand-50 sm:py-24">
+    <section id="logistics" className="scroll-mt-20 bg-muted py-20 sm:py-24">
       <Container>
         <SectionHeading
+          centered
           index="02"
           eyebrow="Logistics & Innovation"
-          title={<span className="text-white">Built for perishables, proven at sea</span>}
-          intro={
-            <span className="text-brand-100/85">
-              Moving fresh produce across borders demands more than shipping — it
-              demands a cold chain that doesn&rsquo;t break. That&rsquo;s our
-              specialism.
-            </span>
-          }
+          title="Built for perishables, proven at sea"
+          intro="Moving fresh produce across borders demands more than shipping — it demands a cold chain that doesn’t break. That’s our specialism."
         />
 
         <div className="mt-14 grid gap-6 md:grid-cols-3">
           {capabilities.map(({ icon: Icon, title, body }) => (
-            <div
-              key={title}
-              className="rounded-2xl border border-brand-800 bg-brand-800/40 p-7 backdrop-blur"
-            >
-              <span className="grid h-12 w-12 place-items-center rounded-xl bg-primary text-primary-foreground">
+            <div key={title} className="card-surface p-7">
+              <span className="grid h-12 w-12 place-items-center rounded-md bg-brand-800 text-white">
                 <Icon className="h-6 w-6" />
               </span>
-              <h3 className="mt-5 text-lg font-bold text-white">{title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-brand-100/80">{body}</p>
+              <h3 className="mt-5 text-lg font-bold text-brand-800">{title}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                {body}
+              </p>
             </div>
           ))}
         </div>
 
-        <div className="mt-12 rounded-2xl border border-brand-700 bg-gradient-to-r from-primary/20 to-brand-700/20 p-8 text-center">
-          <p className="text-lg font-medium text-white sm:text-xl">
-            India&rsquo;s first sea shipment of fresh pineapples to the UAE —
-            <span className="text-brand-200"> a first we&rsquo;re proud to have delivered.</span>
-          </p>
+        {/* Highlight band */}
+        <div className="mt-8 overflow-hidden rounded-xl bg-brand-900 text-white">
+          <div className="grid items-center gap-8 p-8 lg:grid-cols-2 lg:p-10">
+            <div>
+              <p className="eyebrow text-accent-400">A record first</p>
+              <p className="mt-3 text-2xl font-bold leading-snug text-balance sm:text-3xl">
+                India&rsquo;s first sea shipment of fresh pineapples to the UAE.
+              </p>
+              <p className="mt-3 text-brand-200">
+                A milestone we&rsquo;re proud to have delivered — and the
+                foundation of our cold-chain sea-freight capability.
+              </p>
+            </div>
+            <div className="overflow-hidden rounded-lg border border-white/10 bg-white">
+              <img
+                src="/images/hero-trade.svg"
+                alt="Line engraving of a cargo ship carrying containers across the sea"
+                width={1200}
+                height={460}
+                loading="lazy"
+                className="h-auto w-full"
+              />
+            </div>
+          </div>
         </div>
       </Container>
     </section>

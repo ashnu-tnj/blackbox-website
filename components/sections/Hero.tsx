@@ -1,121 +1,98 @@
 import { Container } from "@/components/ui/Container";
 import { company, stats } from "@/data/company";
-import { ArrowRightIcon, ShieldCheckIcon, GlobeIcon } from "@/components/ui/icons";
+import { ArrowRightIcon } from "@/components/ui/icons";
 
 const registrations = ["DGFT", "APEDA", "Coconut Board", "Spices Board", "FSSAI"];
 
 export function Hero() {
   return (
-    <section id="top" className="relative overflow-hidden">
-      {/* Layered background */}
+    <section
+      id="top"
+      className="relative overflow-hidden bg-brand-900 text-white"
+    >
+      {/* Background layers */}
       <div
         aria-hidden="true"
-        className="absolute inset-0 -z-20 bg-gradient-to-b from-brand-50 via-background to-background"
+        className="pointer-events-none absolute inset-0 bg-grid mask-fade-b opacity-40"
       />
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 -z-10 bg-grid mask-fade-b opacity-70"
-      />
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0 -z-10 opacity-70"
+        className="pointer-events-none absolute inset-0"
         style={{
           backgroundImage:
-            "radial-gradient(48rem 26rem at 88% -8%, rgba(34,197,94,0.16), transparent), radial-gradient(36rem 22rem at -6% 4%, rgba(74,112,67,0.12), transparent)",
+            "radial-gradient(42rem 24rem at 78% -10%, rgba(47,111,237,0.35), transparent), radial-gradient(36rem 22rem at 0% 110%, rgba(47,111,237,0.14), transparent)",
         }}
       />
+      {/* Decorative globe */}
+      <svg
+        aria-hidden="true"
+        viewBox="0 0 400 400"
+        className="pointer-events-none absolute -right-16 top-8 hidden h-[30rem] w-[30rem] text-white/10 lg:block"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1"
+      >
+        <circle cx="200" cy="200" r="160" />
+        <ellipse cx="200" cy="200" rx="160" ry="60" />
+        <ellipse cx="200" cy="200" rx="160" ry="110" />
+        <ellipse cx="200" cy="200" rx="60" ry="160" />
+        <ellipse cx="200" cy="200" rx="110" ry="160" />
+        <line x1="40" y1="200" x2="360" y2="200" />
+        <line x1="200" y1="40" x2="200" y2="360" />
+      </svg>
 
-      <Container className="py-16 lg:py-24">
-        <div className="grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
-          {/* Copy */}
-          <div className="animate-fade-up">
-            <span className="badge-pill">
-              <GlobeIcon className="h-4 w-4 text-primary" />
-              Premium agri-export house · Thanjavur, India
-            </span>
+      <Container className="relative py-20 lg:py-28">
+        <div className="mx-auto max-w-3xl text-center animate-fade-up">
+          <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-accent-400">
+            Premium Agricultural Exports · Thanjavur, India
+          </span>
 
-            <h1 className="mt-6 text-4xl font-bold leading-[1.06] text-balance text-brand-900 sm:text-5xl lg:text-[3.4rem]">
-              Pioneering Global Trade in{" "}
-              <span className="text-primary">Premium Agricultural Exports</span>
-            </h1>
+          <h1 className="mt-7 text-4xl font-bold leading-[1.05] text-balance sm:text-5xl lg:text-6xl">
+            Pioneering Global Trade in{" "}
+            <span className="text-accent-400">Premium Agricultural Exports</span>
+          </h1>
 
-            <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
-              {company.name} delivers coconut-based products and fresh fruits to
-              international markets — backed by precision cold-chain logistics and
-              a record of firsts, including India&rsquo;s first sea shipment of
-              fresh pineapples to the UAE.
-            </p>
+          <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-brand-100">
+            {company.name} exports coconut-based products and fresh fruits to
+            international markets — backed by precision cold-chain logistics and a
+            record of firsts, including India&rsquo;s first sea shipment of fresh
+            pineapples to the UAE.
+          </p>
 
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <a href="#inquiry" className="btn-accent group">
-                Request a Trade Quote
-                <ArrowRightIcon className="h-5 w-5 transition-transform group-hover:translate-x-0.5" />
-              </a>
-              <a href="#products" className="btn-outline">
-                Explore Products
-              </a>
-            </div>
-
-            <div className="mt-9 border-t border-line pt-6">
-              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-muted-foreground">
-                Registered &amp; certified with
-              </p>
-              <div className="mt-3 flex flex-wrap items-center gap-x-5 gap-y-2">
-                {registrations.map((r) => (
-                  <span
-                    key={r}
-                    className="text-sm font-semibold text-brand-800"
-                  >
-                    {r}
-                  </span>
-                ))}
-              </div>
-            </div>
+          <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
+            <a href="#inquiry" className="btn-accent group w-full sm:w-auto">
+              Request a Trade Quote
+              <ArrowRightIcon className="h-5 w-5 transition-transform group-hover:translate-x-0.5" />
+            </a>
+            <a href="#products" className="btn-ghost-light w-full sm:w-auto">
+              Explore Products
+            </a>
           </div>
 
-          {/* Visual */}
-          <div className="relative animate-fade-up">
-            <div className="card-surface overflow-hidden rounded-3xl">
-              <img
-                src="/images/hero-trade.svg"
-                alt="Line engraving of a cargo ship carrying containers across the sea — BlackBox Traders' global agricultural exports"
-                width={1200}
-                height={460}
-                className="h-auto w-full"
-                fetchPriority="high"
-              />
-            </div>
-
-            {/* Floating highlight — pioneering shipment */}
-            <div className="card-surface absolute -bottom-6 left-4 max-w-[15rem] rounded-2xl p-4 sm:left-6">
-              <div className="flex items-start gap-3">
-                <span className="grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-primary text-primary-foreground">
-                  <GlobeIcon className="h-5 w-5" />
+          <div className="mt-10">
+            <p className="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-brand-300">
+              Registered &amp; certified with
+            </p>
+            <div className="mt-3 flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
+              {registrations.map((r) => (
+                <span key={r} className="text-sm font-semibold text-brand-100">
+                  {r}
                 </span>
-                <p className="text-sm font-medium leading-snug text-brand-900">
-                  India&rsquo;s first sea shipment of fresh pineapples to the UAE
-                </p>
-              </div>
-            </div>
-
-            {/* Floating badge — verified */}
-            <div className="badge-pill absolute -right-2 -top-4 sm:-right-4">
-              <ShieldCheckIcon className="h-4 w-4 text-primary" />
-              IndiaMART Verified
+              ))}
             </div>
           </div>
         </div>
 
-        {/* Metrics strip — hairline dividers via 1px gap over a line-coloured bg */}
-        <dl className="mt-20 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-line bg-line shadow-card lg:grid-cols-4">
+        {/* Stat bar */}
+        <dl className="mx-auto mt-16 grid max-w-4xl grid-cols-2 gap-px overflow-hidden rounded-xl border border-white/10 bg-white/10 lg:grid-cols-4">
           {stats.map((s) => (
-            <div key={s.label} className="bg-surface p-6 text-center">
+            <div key={s.label} className="bg-brand-900 p-6 text-center">
               <dt className="sr-only">{s.label}</dt>
               <dd>
-                <span className="block text-3xl font-bold text-primary">
+                <span className="block text-3xl font-bold text-white">
                   {s.value}
                 </span>
-                <span className="mt-1.5 block text-sm leading-snug text-muted-foreground">
+                <span className="mt-1.5 block text-sm leading-snug text-brand-200">
                   {s.label}
                 </span>
               </dd>

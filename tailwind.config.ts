@@ -1,9 +1,9 @@
 import type { Config } from "tailwindcss";
 
 /**
- * Design tokens derived from the "Agriculture / Farm Tech" palette and the
- * "Trust & Authority" B2B style. Colours are exposed as CSS variables in
- * globals.css and mapped here so components never use raw hex values.
+ * Corporate navy / white design system.
+ * `brand` is the navy ramp; `accent` is the blue CTA ramp. Semantic tokens
+ * map to CSS variables in globals.css so components avoid raw hex.
  */
 const config: Config = {
   content: [
@@ -14,27 +14,29 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Brand greens
+        // Navy ramp
         brand: {
-          50: "#F3F7ED",
-          100: "#E5EFD6",
-          200: "#CBE0B3",
-          300: "#ABCD86",
-          400: "#8AB75D",
-          500: "#6F9E50", // sage green (secondary)
-          600: "#588157",
-          700: "#4A7043", // fern green (primary)
-          800: "#3A5A40", // deep olive
-          900: "#2C3E2C", // foreground / text
-          950: "#1B271B",
+          50: "#EEF3F9",
+          100: "#D8E3F0",
+          200: "#B4C8E0",
+          300: "#87A4C9",
+          400: "#547CA9",
+          500: "#2F588A",
+          600: "#1E4670",
+          700: "#16375A",
+          800: "#0F2A47", // primary navy
+          900: "#0A1F36",
+          950: "#061320",
         },
-        // Harvest gold accent (CTA / highlights)
-        harvest: {
-          500: "#CA8A04",
-          600: "#A16207",
-          700: "#854D0E",
+        // Blue accent ramp (CTAs, links, highlights)
+        accent: {
+          400: "#5B8DEF",
+          500: "#3B82F6",
+          600: "#2F6FED",
+          700: "#2557C7",
+          800: "#1E44A0",
         },
-        // Semantic tokens mapped to CSS variables
+        // Semantic tokens
         background: "var(--color-background)",
         surface: "var(--color-card)",
         foreground: "var(--color-foreground)",
@@ -43,30 +45,30 @@ const config: Config = {
         line: "var(--color-border)",
         primary: "var(--color-primary)",
         "primary-foreground": "var(--color-on-primary)",
-        accent: "var(--color-accent)",
-        "accent-foreground": "var(--color-on-accent)",
         destructive: "var(--color-destructive)",
       },
       fontFamily: {
-        heading: ["var(--font-poppins)", "system-ui", "sans-serif"],
-        sans: ["var(--font-open-sans)", "system-ui", "sans-serif"],
+        // `heading` kept as an alias of `display` for backwards compatibility
+        display: ["var(--font-display)", "system-ui", "sans-serif"],
+        heading: ["var(--font-display)", "system-ui", "sans-serif"],
+        sans: ["var(--font-sans)", "system-ui", "sans-serif"],
       },
       maxWidth: {
-        content: "80rem", // max-w-7xl equivalent, consistent container
+        content: "80rem",
       },
       boxShadow: {
-        card: "0 1px 3px 0 rgb(44 62 44 / 0.08), 0 1px 2px -1px rgb(44 62 44 / 0.08)",
+        card: "0 1px 2px 0 rgb(15 42 71 / 0.06), 0 1px 3px 0 rgb(15 42 71 / 0.08)",
         "card-hover":
-          "0 10px 30px -12px rgb(74 112 67 / 0.25), 0 4px 8px -4px rgb(74 112 67 / 0.12)",
+          "0 16px 40px -16px rgb(15 42 71 / 0.30), 0 8px 16px -8px rgb(15 42 71 / 0.12)",
       },
       keyframes: {
         "fade-up": {
-          "0%": { opacity: "0", transform: "translateY(12px)" },
+          "0%": { opacity: "0", transform: "translateY(14px)" },
           "100%": { opacity: "1", transform: "translateY(0)" },
         },
       },
       animation: {
-        "fade-up": "fade-up 0.5s ease-out both",
+        "fade-up": "fade-up 0.55s cubic-bezier(0.22,1,0.36,1) both",
       },
     },
   },

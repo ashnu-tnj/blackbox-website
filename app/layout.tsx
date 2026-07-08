@@ -1,19 +1,19 @@
 import type { Metadata, Viewport } from "next";
-import { Poppins, Open_Sans } from "next/font/google";
+import { Space_Grotesk, Inter } from "next/font/google";
 import { company } from "@/data/company";
 import "./globals.css";
 
-const poppins = Poppins({
+const display = Space_Grotesk({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-poppins",
+  weight: ["500", "600", "700"],
+  variable: "--font-display",
   display: "swap",
 });
 
-const openSans = Open_Sans({
+const sans = Inter({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
-  variable: "--font-open-sans",
+  variable: "--font-sans",
   display: "swap",
 });
 
@@ -52,12 +52,12 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#4a7043",
+  themeColor: "#0f2a47",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${poppins.variable} ${openSans.variable}`}>
+    <html lang="en" className={`${display.variable} ${sans.variable}`}>
       <body>
         <a
           href="#products"

@@ -1,41 +1,41 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 460" role="img" aria-label="Line engraving of a cargo ship carrying containers across the sea">
   <defs>
     <pattern id="sea" width="8" height="8" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
-      <line x1="0" y1="0" x2="0" y2="8" stroke="#33452F" stroke-width="1" opacity="0.35"/>
+      <line x1="0" y1="0" x2="0" y2="8" stroke="#0F2A47" stroke-width="1" opacity="0.35"/>
     </pattern>
   </defs>
-  <rect width="1200" height="460" fill="#F1ECDB"/>
-  <rect x="16" y="16" width="1168" height="428" fill="none" stroke="#CFC7AC" stroke-width="1.5"/>
-  <rect x="24" y="24" width="1152" height="412" fill="none" stroke="#CFC7AC" stroke-width="1"/>
+  <rect width="1200" height="460" fill="#EEF2F7"/>
+  <rect x="16" y="16" width="1168" height="428" fill="none" stroke="#CBD5E1" stroke-width="1.5"/>
+  <rect x="24" y="24" width="1152" height="412" fill="none" stroke="#CBD5E1" stroke-width="1"/>
 
   <!-- sun with rays -->
-  <g stroke="#33452F" stroke-width="1.6" fill="none" opacity="0.75">
-    <circle cx="980" cy="120" r="46" fill="#EFE9D4"/>
+  <g stroke="#0F2A47" stroke-width="1.6" fill="none" opacity="0.75">
+    <circle cx="980" cy="120" r="46" fill="#FFFFFF"/>
     <g stroke-linecap="round">
       <path d="M980 58V40M980 200V182M1042 120h18M900 120h18M1024 76l13-13M923 177l13-13M1024 164l13 13M923 63l13 13"/>
     </g>
   </g>
 
   <!-- dotted trade route + pins -->
-  <path d="M150 150 Q470 60 800 150" fill="none" stroke="#33452F" stroke-width="2" stroke-dasharray="1 12" stroke-linecap="round" opacity="0.8"/>
-  <g fill="#EFE9D4" stroke="#33452F" stroke-width="2">
+  <path d="M150 150 Q470 60 800 150" fill="none" stroke="#0F2A47" stroke-width="2" stroke-dasharray="1 12" stroke-linecap="round" opacity="0.8"/>
+  <g fill="#FFFFFF" stroke="#0F2A47" stroke-width="2">
     <path d="M150 168 c-9 -14 -9 -22 0 -30 c9 8 9 16 0 30 Z"/>
     <path d="M800 168 c-9 -14 -9 -22 0 -30 c9 8 9 16 0 30 Z"/>
   </g>
-  <g fill="#33452F"><circle cx="150" cy="146" r="3"/><circle cx="800" cy="146" r="3"/></g>
+  <g fill="#0F2A47"><circle cx="150" cy="146" r="3"/><circle cx="800" cy="146" r="3"/></g>
 
   <!-- sea -->
   <path d="M40 306 H1160 V430 H40 Z" fill="url(#sea)"/>
-  <path d="M40 306 H1160" stroke="#33452F" stroke-width="2" opacity="0.7"/>
-  <g stroke="#33452F" stroke-width="1.6" stroke-linecap="round" fill="none" opacity="0.55">
+  <path d="M40 306 H1160" stroke="#0F2A47" stroke-width="2" opacity="0.7"/>
+  <g stroke="#0F2A47" stroke-width="1.6" stroke-linecap="round" fill="none" opacity="0.55">
     <path d="M90 344 q18 -9 36 0 t36 0"/><path d="M980 360 q18 -9 36 0 t36 0"/>
     <path d="M300 392 q20 -9 40 0 t40 0"/><path d="M700 378 q18 -9 36 0 t36 0"/>
   </g>
 
   <!-- cargo ship -->
-  <g transform="translate(430,196)" stroke="#33452F" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round">
+  <g transform="translate(430,196)" stroke="#0F2A47" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round">
     <!-- containers -->
-    <g fill="#EFE9D4">
+    <g fill="#FFFFFF">
       <rect x="40" y="34" width="66" height="30" rx="2"/><rect x="110" y="34" width="66" height="30" rx="2"/><rect x="180" y="34" width="66" height="30" rx="2"/>
       <rect x="55" y="66" width="66" height="30" rx="2"/><rect x="125" y="66" width="66" height="30" rx="2"/><rect x="195" y="66" width="66" height="30" rx="2"/>
       <rect x="88" y="98" width="66" height="30" rx="2"/><rect x="158" y="98" width="66" height="30" rx="2"/>
@@ -46,7 +46,7 @@
       <path d="M110 98V128M132 98V128M180 98V128M202 98V128"/>
     </g>
     <!-- bridge -->
-    <rect x="270" y="70" width="46" height="58" rx="2" fill="#EFE9D4"/>
+    <rect x="270" y="70" width="46" height="58" rx="2" fill="#FFFFFF"/>
     <g stroke-width="1.6"><path d="M278 84h30M278 96h30M278 108h30"/></g>
     <!-- hull -->
     <path d="M8 128 H338 L308 176 H58 Z" fill="url(#sea)"/>

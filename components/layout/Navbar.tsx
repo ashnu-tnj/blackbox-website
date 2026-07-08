@@ -3,13 +3,27 @@
 import { useEffect, useState } from "react";
 import { Container } from "@/components/ui/Container";
 import { company } from "@/data/company";
-import { LeafIcon, ArrowRightIcon } from "@/components/ui/icons";
+import { ArrowRightIcon } from "@/components/ui/icons";
 
 const links = [
   { href: "#products", label: "Products" },
   { href: "#logistics", label: "Logistics" },
   { href: "#credentials", label: "Credentials" },
 ];
+
+function Logo() {
+  return (
+    <a
+      href="#top"
+      className="flex items-center gap-2.5 font-display text-lg font-bold tracking-tight text-brand-800"
+    >
+      <span className="grid h-9 w-9 place-items-center rounded-md bg-brand-800 font-display text-sm font-bold text-white">
+        BB
+      </span>
+      {company.name}
+    </a>
+  );
+}
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
@@ -24,10 +38,8 @@ export function Navbar() {
 
   return (
     <header
-      className={`sticky top-0 z-40 transition-shadow duration-200 ${
-        scrolled
-          ? "border-b border-line bg-background/85 shadow-card backdrop-blur"
-          : "border-b border-transparent bg-background/60 backdrop-blur"
+      className={`sticky top-0 z-40 bg-white transition-shadow duration-200 ${
+        scrolled ? "border-b border-line shadow-card" : "border-b border-line/60"
       }`}
     >
       <Container>
@@ -35,22 +47,14 @@ export function Navbar() {
           className="flex h-16 items-center justify-between gap-4"
           aria-label="Primary"
         >
-          <a
-            href="#top"
-            className="flex items-center gap-2.5 font-heading text-lg font-bold tracking-tight text-brand-900"
-          >
-            <span className="grid h-9 w-9 place-items-center rounded-lg bg-primary text-primary-foreground">
-              <LeafIcon className="h-5 w-5" />
-            </span>
-            {company.name}
-          </a>
+          <Logo />
 
           <ul className="hidden items-center gap-8 md:flex">
             {links.map((l) => (
               <li key={l.href}>
                 <a
                   href={l.href}
-                  className="text-sm font-medium text-brand-900/80 transition-colors hover:text-primary"
+                  className="text-sm font-medium text-brand-700 transition-colors hover:text-accent-600"
                 >
                   {l.label}
                 </a>
@@ -60,14 +64,14 @@ export function Navbar() {
 
           <div className="hidden md:block">
             <a href="#inquiry" className="btn-accent group px-5 py-2.5 text-sm">
-              Trade Inquiry
+              Get a Quote
               <ArrowRightIcon className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
             </a>
           </div>
 
           <button
             type="button"
-            className="inline-flex h-10 w-10 items-center justify-center rounded-lg text-brand-900 hover:bg-brand-50 md:hidden"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-md text-brand-800 hover:bg-brand-50 md:hidden"
             aria-expanded={open}
             aria-controls="mobile-menu"
             aria-label="Toggle navigation menu"
@@ -92,7 +96,7 @@ export function Navbar() {
       </Container>
 
       {open && (
-        <div id="mobile-menu" className="border-t border-line bg-surface md:hidden">
+        <div id="mobile-menu" className="border-t border-line bg-white md:hidden">
           <Container className="py-3">
             <ul className="flex flex-col">
               {links.map((l) => (
@@ -100,7 +104,7 @@ export function Navbar() {
                   <a
                     href={l.href}
                     onClick={() => setOpen(false)}
-                    className="block rounded-lg px-2 py-3 text-base font-medium text-brand-900 hover:bg-brand-50"
+                    className="block rounded-md px-2 py-3 text-base font-medium text-brand-800 hover:bg-brand-50"
                   >
                     {l.label}
                   </a>
@@ -112,7 +116,7 @@ export function Navbar() {
                   onClick={() => setOpen(false)}
                   className="btn-accent w-full"
                 >
-                  Trade Inquiry
+                  Get a Quote
                 </a>
               </li>
             </ul>

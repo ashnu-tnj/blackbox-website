@@ -1,24 +1,24 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" role="img" aria-label="Engraving of semi-husked coconuts">
   <defs>
     <pattern id="hc" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
-      <line x1="0" y1="0" x2="0" y2="7" stroke="#33452F" stroke-width="1" opacity="0.5"/>
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#0F2A47" stroke-width="1" opacity="0.5"/>
     </pattern>
   </defs>
-  <rect width="480" height="360" fill="#F1ECDB"/>
-  <rect x="14" y="14" width="452" height="332" fill="none" stroke="#CFC7AC" stroke-width="1.5"/>
-  <rect x="20" y="20" width="440" height="320" fill="none" stroke="#CFC7AC" stroke-width="1"/>
-  <g stroke="#33452F" fill="#EFE9D4" stroke-width="2.4" stroke-linejoin="round">
+  <rect width="480" height="360" fill="#EEF2F7"/>
+  <rect x="14" y="14" width="452" height="332" fill="none" stroke="#CBD5E1" stroke-width="1.5"/>
+  <rect x="20" y="20" width="440" height="320" fill="none" stroke="#CBD5E1" stroke-width="1"/>
+  <g stroke="#0F2A47" fill="#FFFFFF" stroke-width="2.4" stroke-linejoin="round">
     <circle cx="324" cy="198" r="56"/>
-    <circle cx="324" cy="198" r="40" fill="#F6F2E4"/>
+    <circle cx="324" cy="198" r="40" fill="#F1F5F9"/>
     <circle cx="190" cy="182" r="90"/>
   </g>
   <path d="M190 92 a90 90 0 0 1 0 180 a66 90 0 0 0 0 -180" fill="url(#hc)"/>
   <path d="M324 158 a40 40 0 0 1 0 80 a26 40 0 0 0 0 -80" fill="url(#hc)" opacity="0.7"/>
-  <g stroke="#33452F" stroke-width="1.4" fill="none" opacity="0.85" stroke-linecap="round">
+  <g stroke="#0F2A47" stroke-width="1.4" fill="none" opacity="0.85" stroke-linecap="round">
     <path d="M118 146 Q190 182 118 218"/>
     <path d="M148 110 Q212 182 148 254"/>
     <path d="M214 108 Q272 182 214 256"/>
     <path d="M250 134 Q286 182 250 230"/>
   </g>
-  <g fill="#33452F"><circle cx="190" cy="150" r="7"/><circle cx="165" cy="183" r="7"/><circle cx="214" cy="185" r="7"/></g>
+  <g fill="#0F2A47"><circle cx="190" cy="150" r="7"/><circle cx="165" cy="183" r="7"/><circle cx="214" cy="185" r="7"/></g>
 </svg>
