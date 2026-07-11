@@ -10,6 +10,7 @@ const links = [
   { href: "#logistics", label: "Logistics" },
   { href: "#credentials", label: "Credentials" },
   { href: "#gallery", label: "Gallery" },
+  { href: "#faq", label: "FAQ" },
 ];
 
 function Logo() {

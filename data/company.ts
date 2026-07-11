@@ -15,7 +15,6 @@ export const company = {
   // Contact
   contactPerson: "Mohamed Ashfaaq",
   email: "blackboxtraders@hotmail.com",
-  phone: "+91 98940 43632",
   location: "Thanjavur, Tamil Nadu, India",
   address:
     "S-16, SIDCO Industrial Estate, Nanjikottai Road, Thanjavur 613007, Tamil Nadu, India",

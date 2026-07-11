@@ -43,10 +43,18 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_IN",
     siteName: company.name,
+    url: "/",
+  },
+  twitter: {
+    card: "summary",
+    title: `${company.name} — Premium Agricultural Exports from India`,
+    description,
   },
   robots: { index: true, follow: true },
   alternates: { canonical: "/" },
   manifest: "/manifest.webmanifest",
+  category: "business",
+  formatDetection: { telephone: false },
 };
 
 export const viewport: Viewport = {

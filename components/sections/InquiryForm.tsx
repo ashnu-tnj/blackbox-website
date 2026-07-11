@@ -117,7 +117,7 @@ export function InquiryForm() {
         <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
           <div className="lg:sticky lg:top-24">
             <SectionHeading
-              index="05"
+              index="06"
               eyebrow="Trade Inquiry"
               title="Request an export quote"
               intro="Tell us your destination and requirement. Our team responds with pricing, specifications, and shipping options tailored to your market."

@@ -45,14 +45,6 @@ export function Footer() {
                 {company.contactPerson}
               </li>
               <li>
-                <a
-                  href={`tel:${company.phone.replace(/\s+/g, "")}`}
-                  className="hover:text-white"
-                >
-                  {company.phone}
-                </a>
-              </li>
-              <li>
                 <a href={`mailto:${company.email}`} className="hover:text-white">
                   {company.email}
                 </a>

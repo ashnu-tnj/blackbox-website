@@ -15,15 +15,6 @@ export function TopBar() {
             >
               {company.email}
             </a>
-            <span aria-hidden="true" className="text-brand-700">
-              |
-            </span>
-            <a
-              href={`tel:${company.phone.replace(/\s+/g, "")}`}
-              className="transition-colors hover:text-white"
-            >
-              {company.phone}
-            </a>
           </div>
           <div className="flex items-center gap-5">
             <span className="text-brand-200/80">
