@@ -1,28 +1,28 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" role="img" aria-label="Engraving of desiccated coconut in a bowl">
   <defs>
     <pattern id="hd" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
-      <line x1="0" y1="0" x2="0" y2="7" stroke="#0F2A47" stroke-width="1" opacity="0.5"/>
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#3A5A40" stroke-width="1" opacity="0.5"/>
     </pattern>
   </defs>
-  <rect width="480" height="360" fill="#EEF2F7"/>
-  <rect x="14" y="14" width="452" height="332" fill="none" stroke="#CBD5E1" stroke-width="1.5"/>
-  <rect x="20" y="20" width="440" height="320" fill="none" stroke="#CBD5E1" stroke-width="1"/>
+  <rect width="480" height="360" fill="#EFF5E6"/>
+  <rect x="14" y="14" width="452" height="332" fill="none" stroke="#CBE0B3" stroke-width="1.5"/>
+  <rect x="20" y="20" width="440" height="320" fill="none" stroke="#CBE0B3" stroke-width="1"/>
   <!-- coconut half, back -->
-  <g stroke="#0F2A47" stroke-width="2.2" stroke-linejoin="round" fill="#FFFFFF">
+  <g stroke="#3A5A40" stroke-width="2.2" stroke-linejoin="round" fill="#FFFFFF">
     <path d="M300 132 a46 30 0 0 1 92 0 Z"/>
-    <path d="M312 132 a34 20 0 0 1 68 0 Z" fill="#F1F5F9"/>
+    <path d="M312 132 a34 20 0 0 1 68 0 Z" fill="#F3F7ED"/>
   </g>
   <!-- bowl -->
-  <g stroke="#0F2A47" stroke-width="2.4" stroke-linejoin="round">
+  <g stroke="#3A5A40" stroke-width="2.4" stroke-linejoin="round">
     <path d="M148 200 A92 78 0 0 0 332 200 Z" fill="#FFFFFF"/>
-    <ellipse cx="240" cy="200" rx="92" ry="20" fill="#F1F5F9"/>
+    <ellipse cx="240" cy="200" rx="92" ry="20" fill="#F3F7ED"/>
     <path d="M172 196 Q205 166 240 172 Q276 164 308 196 Z" fill="#FFFFFF"/>
   </g>
   <path d="M240 278 A92 78 0 0 0 332 200 L316 200 A76 66 0 0 1 240 262 Z" fill="url(#hd)"/>
   <!-- flake texture on mound -->
-  <g stroke="#0F2A47" stroke-width="1.2" stroke-linecap="round" opacity="0.75">
+  <g stroke="#3A5A40" stroke-width="1.2" stroke-linecap="round" opacity="0.75">
     <path d="M192 186 l12 -3"/><path d="M216 176 l14 -1"/><path d="M244 173 l14 2"/><path d="M272 179 l13 3"/>
     <path d="M204 192 l11 0"/><path d="M234 188 l13 1"/><path d="M262 190 l12 -1"/>
   </g>
-  <g stroke="#0F2A47" stroke-width="1.2" opacity="0.6"><path d="M326 128 l10 -2"/><path d="M344 128 l10 2"/></g>
+  <g stroke="#3A5A40" stroke-width="1.2" opacity="0.6"><path d="M326 128 l10 -2"/><path d="M344 128 l10 2"/></g>
 </svg>

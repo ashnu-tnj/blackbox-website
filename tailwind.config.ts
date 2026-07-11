@@ -1,9 +1,10 @@
 import type { Config } from "tailwindcss";
 
 /**
- * Corporate navy / white design system.
- * `brand` is the navy ramp; `accent` is the blue CTA ramp. Semantic tokens
- * map to CSS variables in globals.css so components avoid raw hex.
+ * "Agriculture / Farm Tech" green design system.
+ * `brand` is the fern/olive green ramp; `accent` is the harvest-gold CTA ramp.
+ * Semantic tokens map to CSS variables in globals.css so components avoid
+ * raw hex values.
  */
 const config: Config = {
   content: [
@@ -14,27 +15,28 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Navy ramp
+        // Green ramp (sage → fern → deep olive)
         brand: {
-          50: "#EEF3F9",
-          100: "#D8E3F0",
-          200: "#B4C8E0",
-          300: "#87A4C9",
-          400: "#547CA9",
-          500: "#2F588A",
-          600: "#1E4670",
-          700: "#16375A",
-          800: "#0F2A47", // primary navy
-          900: "#0A1F36",
-          950: "#061320",
+          50: "#F3F7ED",
+          100: "#E5EFD6",
+          200: "#CBE0B3",
+          300: "#ABCD86",
+          400: "#8AB75D",
+          500: "#6F9E50", // sage green
+          600: "#588157",
+          700: "#4A7043", // fern green (primary)
+          800: "#3A5A40", // deep olive
+          900: "#2C3E2C",
+          950: "#1B271B",
         },
-        // Blue accent ramp (CTAs, links, highlights)
+        // Harvest-gold accent ramp (CTAs, links, highlights)
         accent: {
-          400: "#5B8DEF",
-          500: "#3B82F6",
-          600: "#2F6FED",
-          700: "#2557C7",
-          800: "#1E44A0",
+          300: "#F2CC6B",
+          400: "#E9B949",
+          500: "#CA8A04",
+          600: "#A16207",
+          700: "#854D0E",
+          800: "#713F12",
         },
         // Semantic tokens
         background: "var(--color-background)",
@@ -57,18 +59,40 @@ const config: Config = {
         content: "80rem",
       },
       boxShadow: {
-        card: "0 1px 2px 0 rgb(15 42 71 / 0.06), 0 1px 3px 0 rgb(15 42 71 / 0.08)",
+        card: "0 1px 3px 0 rgb(44 62 44 / 0.08), 0 1px 2px -1px rgb(44 62 44 / 0.08)",
         "card-hover":
-          "0 16px 40px -16px rgb(15 42 71 / 0.30), 0 8px 16px -8px rgb(15 42 71 / 0.12)",
+          "0 18px 40px -16px rgb(58 90 64 / 0.35), 0 8px 16px -8px rgb(58 90 64 / 0.15)",
+        btn: "0 2px 0 0 rgb(113 63 18 / 0.55), 0 4px 12px -4px rgb(113 63 18 / 0.4)",
+        "btn-press": "0 0 0 0 rgb(113 63 18 / 0.55), 0 1px 3px -2px rgb(113 63 18 / 0.4)",
+        "btn-green": "0 2px 0 0 rgb(44 62 44 / 0.55), 0 4px 12px -4px rgb(44 62 44 / 0.4)",
       },
       keyframes: {
         "fade-up": {
           "0%": { opacity: "0", transform: "translateY(14px)" },
           "100%": { opacity: "1", transform: "translateY(0)" },
         },
+        float: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-14px)" },
+        },
+        "float-soft": {
+          "0%, 100%": { transform: "translateY(0) rotate(0deg)" },
+          "50%": { transform: "translateY(-8px) rotate(2deg)" },
+        },
+        "spin-slow": {
+          from: { transform: "rotate(0deg)" },
+          to: { transform: "rotate(360deg)" },
+        },
+        dash: {
+          to: { strokeDashoffset: "-48" },
+        },
       },
       animation: {
         "fade-up": "fade-up 0.55s cubic-bezier(0.22,1,0.36,1) both",
+        float: "float 7s ease-in-out infinite",
+        "float-soft": "float-soft 9s ease-in-out infinite",
+        "spin-slow": "spin-slow 60s linear infinite",
+        dash: "dash 2.4s linear infinite",
       },
     },
   },

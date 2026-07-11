@@ -1,16 +1,16 @@
 import type { Metadata, Viewport } from "next";
-import { Space_Grotesk, Inter } from "next/font/google";
+import { Poppins, Open_Sans } from "next/font/google";
 import { company } from "@/data/company";
 import "./globals.css";
 
-const display = Space_Grotesk({
+const display = Poppins({
   subsets: ["latin"],
   weight: ["500", "600", "700"],
   variable: "--font-display",
   display: "swap",
 });
 
-const sans = Inter({
+const sans = Open_Sans({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
   variable: "--font-sans",
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#0f2a47",
+  themeColor: "#3a5a40",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

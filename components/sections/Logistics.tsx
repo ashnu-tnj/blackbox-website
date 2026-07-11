@@ -1,6 +1,8 @@
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ShipIcon, SnowflakeIcon, GlobeIcon } from "@/components/ui/icons";
+import { Tilt } from "@/components/fx/Tilt";
+import { Reveal } from "@/components/fx/Reveal";
 
 const capabilities = [
   {
@@ -24,53 +26,85 @@ export function Logistics() {
   return (
     <section id="logistics" className="scroll-mt-20 bg-muted py-20 sm:py-24">
       <Container>
-        <SectionHeading
-          centered
-          index="02"
-          eyebrow="Logistics & Innovation"
-          title="Built for perishables, proven at sea"
-          intro="Moving fresh produce across borders demands more than shipping — it demands a cold chain that doesn’t break. That’s our specialism."
-        />
+        <Reveal>
+          <SectionHeading
+            centered
+            index="02"
+            eyebrow="Logistics & Innovation"
+            title="Built for perishables, proven at sea"
+            intro="Moving fresh produce across borders demands more than shipping — it demands a cold chain that doesn’t break. That’s our specialism."
+          />
+        </Reveal>
 
         <div className="mt-14 grid gap-6 md:grid-cols-3">
-          {capabilities.map(({ icon: Icon, title, body }) => (
-            <div key={title} className="card-surface p-7">
-              <span className="grid h-12 w-12 place-items-center rounded-md bg-brand-800 text-white">
-                <Icon className="h-6 w-6" />
-              </span>
-              <h3 className="mt-5 text-lg font-bold text-brand-800">{title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                {body}
-              </p>
-            </div>
+          {capabilities.map(({ icon: Icon, title, body }, i) => (
+            <Reveal key={title} delay={i * 90}>
+              <Tilt className="h-full rounded-lg">
+                <div className="card-surface h-full p-7">
+                  <span className="grid h-12 w-12 place-items-center rounded-md bg-brand-700 text-white">
+                    <Icon className="h-6 w-6" />
+                  </span>
+                  <h3 className="mt-5 text-lg font-bold text-brand-800">
+                    {title}
+                  </h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                    {body}
+                  </p>
+                </div>
+              </Tilt>
+            </Reveal>
           ))}
         </div>
 
-        {/* Highlight band */}
-        <div className="mt-8 overflow-hidden rounded-xl bg-brand-900 text-white">
-          <div className="grid items-center gap-8 p-8 lg:grid-cols-2 lg:p-10">
-            <div>
-              <p className="eyebrow text-accent-400">A record first</p>
-              <p className="mt-3 text-2xl font-bold leading-snug text-balance sm:text-3xl">
-                India&rsquo;s first sea shipment of fresh pineapples to the UAE.
-              </p>
-              <p className="mt-3 text-brand-200">
-                A milestone we&rsquo;re proud to have delivered — and the
-                foundation of our cold-chain sea-freight capability.
-              </p>
-            </div>
-            <div className="overflow-hidden rounded-lg border border-white/10 bg-white">
-              <img
-                src="/images/hero-trade.svg"
-                alt="Line engraving of a cargo ship carrying containers across the sea"
-                width={1200}
-                height={460}
-                loading="lazy"
-                className="h-auto w-full"
+        {/* Highlight band with animated sea route */}
+        <Reveal delay={120}>
+          <div className="relative mt-8 overflow-hidden rounded-xl bg-brand-900 text-white">
+            {/* Animated dotted trade route, Thanjavur → Jebel Ali */}
+            <svg
+              aria-hidden="true"
+              viewBox="0 0 800 220"
+              preserveAspectRatio="none"
+              className="pointer-events-none absolute inset-x-0 top-0 h-full w-full text-accent-400/40"
+              fill="none"
+            >
+              <path
+                d="M780 40 C 620 10, 420 90, 260 120 S 60 190, 20 200"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeDasharray="4 8"
+                strokeLinecap="round"
+                className="animate-dash"
               />
+              <circle cx="780" cy="40" r="5" fill="currentColor" />
+              <circle cx="20" cy="200" r="5" fill="currentColor" />
+            </svg>
+
+            <div className="relative grid items-center gap-8 p-8 lg:grid-cols-2 lg:p-10">
+              <div>
+                <p className="eyebrow text-accent-400">A record first</p>
+                <p className="mt-3 text-2xl font-bold leading-snug text-balance sm:text-3xl">
+                  India&rsquo;s first sea shipment of fresh pineapples to the UAE.
+                </p>
+                <p className="mt-3 text-brand-200">
+                  A milestone we&rsquo;re proud to have delivered — and the
+                  foundation of our cold-chain sea-freight capability.
+                </p>
+              </div>
+              <Tilt max={5} scale={1.01} className="rounded-lg">
+                <div className="animate-float-soft overflow-hidden rounded-lg border border-white/10 bg-white">
+                  <img
+                    src="/images/hero-trade.svg"
+                    alt="Line engraving of a cargo ship carrying containers across the sea"
+                    width={1200}
+                    height={460}
+                    loading="lazy"
+                    className="h-auto w-full"
+                  />
+                </div>
+              </Tilt>
             </div>
           </div>
-        </div>
+        </Reveal>
       </Container>
     </section>
   );

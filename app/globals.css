@@ -3,19 +3,20 @@
 @tailwind utilities;
 
 /**
- * Corporate navy / white theme tokens. Edit here to re-theme the site.
+ * Semantic colour tokens — "Agriculture / Farm Tech" green palette.
+ * Edit these to re-theme the entire site.
  */
 :root {
-  --color-primary: #0f2a47; /* navy */
+  --color-primary: #4a7043; /* fern green */
   --color-on-primary: #ffffff;
-  --color-accent: #2f6fed; /* blue */
+  --color-accent: #a16207; /* harvest gold (WCAG-safe) */
   --color-on-accent: #ffffff;
-  --color-background: #ffffff;
-  --color-foreground: #0f172a; /* slate-900 */
+  --color-background: #f3f7ed; /* light sage cream */
+  --color-foreground: #2c3e2c; /* deep olive-green text */
   --color-card: #ffffff;
-  --color-muted: #f1f5f9; /* slate-100 */
-  --color-muted-foreground: #64748b; /* slate-500 */
-  --color-border: #e2e8f0; /* slate-200 */
+  --color-muted: #e5efd6;
+  --color-muted-foreground: #566953;
+  --color-border: #cbe0b3;
   --color-destructive: #dc2626;
 }
 
@@ -43,7 +44,7 @@
   }
 
   :focus-visible {
-    @apply outline-none ring-2 ring-accent-600 ring-offset-2 ring-offset-background;
+    @apply outline-none ring-2 ring-primary ring-offset-2 ring-offset-background;
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -62,23 +63,43 @@
 
 @layer components {
   .btn {
-    @apply inline-flex items-center justify-center gap-2 rounded-md px-6 py-3 text-base font-semibold transition-all duration-200 focus-visible:ring-2 focus-visible:ring-offset-2;
+    @apply relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-lg px-6 py-3 text-base font-semibold transition-all duration-200 focus-visible:ring-2 focus-visible:ring-offset-2;
   }
+  /* Harvest-gold CTA with a 3D press + light sweep on hover */
   .btn-accent {
-    @apply btn bg-accent-600 text-white shadow-card hover:bg-accent-700 active:scale-[0.99];
+    @apply btn bg-accent-600 text-white shadow-btn hover:-translate-y-0.5 hover:bg-accent-700 active:translate-y-0.5 active:shadow-btn-press;
   }
   .btn-primary {
-    @apply btn bg-primary text-primary-foreground shadow-card hover:bg-brand-900 active:scale-[0.99];
+    @apply btn bg-primary text-primary-foreground shadow-btn-green hover:-translate-y-0.5 hover:bg-brand-800 active:translate-y-0.5 active:shadow-btn-press;
   }
   .btn-outline {
-    @apply btn border border-line bg-white text-brand-800 hover:border-brand-300 hover:bg-brand-50 active:scale-[0.99];
+    @apply btn border border-brand-300 bg-white text-brand-800 hover:-translate-y-0.5 hover:border-brand-500 hover:bg-brand-50 active:translate-y-0;
   }
   .btn-ghost-light {
-    @apply btn border border-white/25 bg-white/5 text-white hover:bg-white/10 active:scale-[0.99];
+    @apply btn border border-white/25 bg-white/5 text-white hover:-translate-y-0.5 hover:bg-white/10 active:translate-y-0;
+  }
+  /* Sheen sweep — pairs with .btn */
+  .btn-accent::before,
+  .btn-primary::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      105deg,
+      transparent 40%,
+      rgba(255, 255, 255, 0.28) 50%,
+      transparent 60%
+    );
+    transform: translateX(-120%);
+    transition: transform 0.6s ease;
+  }
+  .btn-accent:hover::before,
+  .btn-primary:hover::before {
+    transform: translateX(120%);
   }
 
   .eyebrow {
-    @apply text-xs font-semibold uppercase tracking-[0.2em] text-accent-600;
+    @apply text-xs font-semibold uppercase tracking-[0.2em] text-accent-700;
   }
   .badge-pill {
     @apply inline-flex items-center gap-2 rounded-full border border-line bg-white px-4 py-1.5 text-sm font-medium text-brand-800 shadow-card;
@@ -112,4 +133,44 @@
     -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent);
     mask-image: linear-gradient(to bottom, black 60%, transparent);
   }
+
+  /* --- 3D helpers --- */
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+}
+
+/* --- Scroll reveal (driven by components/fx/Reveal.tsx) --- */
+.reveal-hidden {
+  opacity: 0;
+  transform: translateY(22px);
+}
+.reveal-shown {
+  opacity: 1;
+  transform: none;
+  transition:
+    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* --- Tilt glare (positioned by components/fx/Tilt.tsx via --gx/--gy) --- */
+.tilt-glare {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  background: radial-gradient(
+    24rem 16rem at var(--gx, 50%) var(--gy, 50%),
+    rgba(255, 255, 255, 0.45),
+    transparent 65%
+  );
+  mix-blend-mode: soft-light;
+}
+.tilt-active .tilt-glare {
+  opacity: 1;
 }

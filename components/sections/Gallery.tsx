@@ -15,11 +15,23 @@ const filters: Filter[] = ["All", ...galleryCategories];
 export function Gallery() {
   const [filter, setFilter] = useState<Filter>("All");
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+  // Photos registered in data/gallery.ts but not uploaded yet fail to load —
+  // hide those tiles instead of showing broken thumbnails.
+  const [failed, setFailed] = useState<ReadonlySet<string>>(new Set());
 
+  const markFailed = useCallback((src: string) => {
+    setFailed((prev) => {
+      const next = new Set(prev);
+      next.add(src);
+      return next;
+    });
+  }, []);
+
+  const available = galleryItems.filter((i) => !failed.has(i.src));
   const visible =
     filter === "All"
-      ? galleryItems
-      : galleryItems.filter((i) => i.category === filter);
+      ? available
+      : available.filter((i) => i.category === filter);
 
   const close = useCallback(() => setOpenIndex(null), []);
   const step = useCallback(
@@ -46,7 +58,7 @@ export function Gallery() {
     };
   }, [openIndex, close, step]);
 
-  if (galleryItems.length === 0) return null;
+  if (available.length === 0) return null;
 
   return (
     <section id="gallery" className="scroll-mt-20 bg-muted py-20 sm:py-24">
@@ -96,7 +108,7 @@ export function Gallery() {
                 type="button"
                 onClick={() => setOpenIndex(i)}
                 aria-label={`View larger: ${item.caption}`}
-                className="group block w-full overflow-hidden rounded-lg border border-line bg-white text-left shadow-card transition-all duration-200 hover:-translate-y-0.5 hover:border-accent-500 hover:shadow-card-hover"
+                className="group block w-full overflow-hidden rounded-lg border border-line bg-white text-left shadow-card transition-all duration-200 hover:-translate-y-1 hover:border-brand-400 hover:shadow-card-hover"
               >
                 <span
                   className={`block overflow-hidden ${
@@ -109,6 +121,7 @@ export function Gallery() {
                     loading="lazy"
                     width={480}
                     height={360}
+                    onError={() => markFailed(item.src)}
                     className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.03]"
                   />
                 </span>

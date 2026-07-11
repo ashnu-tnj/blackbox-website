@@ -16,7 +16,7 @@ import {
 type Status = "idle" | "submitting" | "success" | "error";
 
 const fieldBase =
-  "w-full rounded-md border bg-surface px-4 py-3 text-base text-brand-900 placeholder:text-muted-foreground/70 transition-colors focus:border-accent-500 focus-visible:ring-2 focus-visible:ring-accent-600 focus-visible:ring-offset-0";
+  "w-full rounded-md border bg-surface px-4 py-3 text-base text-brand-900 placeholder:text-muted-foreground/70 transition-colors focus:border-brand-500 focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-0";
 
 export function InquiryForm() {
   const [errors, setErrors] = useState<InquiryErrors>({});
@@ -93,7 +93,7 @@ export function InquiryForm() {
             <p className="mt-3 text-muted-foreground">
               Our export desk will respond to your requirement shortly. For urgent
               trade discussions, email us at{" "}
-              <a href={`mailto:${company.email}`} className="font-semibold text-accent-600">
+              <a href={`mailto:${company.email}`} className="font-semibold text-accent-700">
                 {company.email}
               </a>
               .
@@ -129,7 +129,7 @@ export function InquiryForm() {
                 "Flexible volumes — trial orders to full container loads",
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3 text-brand-900">
-                  <ShieldCheckIcon className="mt-0.5 h-5 w-5 shrink-0 text-accent-600" />
+                  <ShieldCheckIcon className="mt-0.5 h-5 w-5 shrink-0 text-brand-600" />
                   <span className="text-sm leading-relaxed">{item}</span>
                 </li>
               ))}

@@ -1,24 +1,24 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" role="img" aria-label="Engraving of frozen coconut">
   <defs>
     <pattern id="hf" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
-      <line x1="0" y1="0" x2="0" y2="7" stroke="#0F2A47" stroke-width="1" opacity="0.45"/>
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#3A5A40" stroke-width="1" opacity="0.45"/>
     </pattern>
   </defs>
-  <rect width="480" height="360" fill="#EEF2F7"/>
-  <rect x="14" y="14" width="452" height="332" fill="none" stroke="#CBD5E1" stroke-width="1.5"/>
-  <rect x="20" y="20" width="440" height="320" fill="none" stroke="#CBD5E1" stroke-width="1"/>
+  <rect width="480" height="360" fill="#EFF5E6"/>
+  <rect x="14" y="14" width="452" height="332" fill="none" stroke="#CBE0B3" stroke-width="1.5"/>
+  <rect x="20" y="20" width="440" height="320" fill="none" stroke="#CBE0B3" stroke-width="1"/>
   <!-- coconut half: concentric shell + flesh -->
-  <g stroke="#0F2A47" stroke-width="2.4" stroke-linejoin="round" fill="none">
+  <g stroke="#3A5A40" stroke-width="2.4" stroke-linejoin="round" fill="none">
     <circle cx="240" cy="184" r="92" fill="#FFFFFF"/>
-    <circle cx="240" cy="184" r="76" fill="#0F2A47" opacity="0.12"/>
+    <circle cx="240" cy="184" r="76" fill="#3A5A40" opacity="0.12"/>
     <circle cx="240" cy="184" r="76"/>
     <circle cx="240" cy="184" r="66" fill="#FFFFFF"/>
   </g>
   <path d="M240 118 a66 66 0 0 1 0 132 a44 66 0 0 0 0 -132" fill="url(#hf)"/>
   <!-- frost specks -->
-  <g fill="#0F2A47" opacity="0.55"><circle cx="262" cy="200" r="3"/><circle cx="226" cy="210" r="2.6"/><circle cx="256" cy="164" r="2.4"/></g>
+  <g fill="#3A5A40" opacity="0.55"><circle cx="262" cy="200" r="3"/><circle cx="226" cy="210" r="2.6"/><circle cx="256" cy="164" r="2.4"/></g>
   <!-- snowflakes (line) -->
-  <g stroke="#0F2A47" stroke-width="1.8" stroke-linecap="round" opacity="0.8">
+  <g stroke="#3A5A40" stroke-width="1.8" stroke-linecap="round" opacity="0.8">
     <g transform="translate(96,110)"><path d="M0 -15V15M-13 -7.5L13 7.5M-13 7.5L13 -7.5"/><path d="M-4 -11l4 3l4 -3M-4 11l4 -3l4 3"/></g>
     <g transform="translate(384,124)"><path d="M0 -13V13M-11 -6.5L11 6.5M-11 6.5L11 -6.5"/></g>
     <g transform="translate(372,244)"><path d="M0 -11V11M-9.5 -5.5L9.5 5.5M-9.5 5.5L9.5 -5.5"/></g>
