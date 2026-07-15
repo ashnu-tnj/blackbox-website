@@ -2,7 +2,7 @@ import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { credentials, type Credential } from "@/data/credentials";
 import { company } from "@/data/company";
-import { ShieldCheckIcon, DocumentIcon, ArrowRightIcon } from "@/components/ui/icons";
+import { ShieldCheckIcon, ArrowRightIcon } from "@/components/ui/icons";
 import { Tilt } from "@/components/fx/Tilt";
 import { Reveal } from "@/components/fx/Reveal";
 
@@ -84,18 +84,6 @@ function CredentialCard({ credential }: { credential: Credential }) {
           <p className="mt-3 font-mono text-xs tabular-nums text-muted-foreground">
             {credential.reference}
           </p>
-        )}
-
-        {credential.document && (
-          <a
-            href={credential.document}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-accent-700 underline-offset-4 hover:underline"
-          >
-            <DocumentIcon className="h-4 w-4" />
-            View document
-          </a>
         )}
       </article>
     </Tilt>
