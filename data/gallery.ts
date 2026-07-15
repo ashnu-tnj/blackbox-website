@@ -1,12 +1,11 @@
 /**
  * Photo gallery manifest.
  *
- * To add photos: drop image files into /public/images/gallery/ and add an
- * entry here — the Gallery section renders directly from this array.
- *
- * NOTE: The current entries are placeholder illustrations. Replace `src`
- * values with real photographs (e.g. "/images/gallery/pineapple-loading.jpg")
- * as they become available; captions and categories are free text.
+ * To add photos: drop image files into /public/images/ and add an entry here —
+ * the Gallery section renders directly from this array. Entries whose image
+ * file is not present yet are hidden automatically (the tile's onError removes
+ * it), so the "Harvesting / Grading / Container Loading" set below stays
+ * invisible until those files are uploaded to /public/images/gallery/.
  */
 export type GalleryCategory = "Products" | "Exports & Logistics";
 
@@ -25,6 +24,53 @@ export const galleryCategories: GalleryCategory[] = [
 ];
 
 export const galleryItems: GalleryItem[] = [
+  // --- Live now: real product & logistics imagery already deployed ---
+  {
+    src: "/images/products/fresh-pineapples.jpg",
+    alt: "Export-grade pineapples growing in the field",
+    caption: "Field-grown pineapples — Queen variety",
+    category: "Products",
+    wide: true,
+  },
+  {
+    src: "/images/products/coconuts.jpg",
+    alt: "Fresh semi-husked coconuts, cut to show the white kernel",
+    caption: "Semi-husked coconuts, graded for export",
+    category: "Products",
+  },
+  {
+    src: "/images/products/desiccated-coconut.jpg",
+    alt: "Grated desiccated coconut",
+    caption: "Desiccated coconut, food-manufacturing grade",
+    category: "Products",
+  },
+  {
+    src: "/images/products/frozen-coconut.jpg",
+    alt: "White frozen coconut pieces in packaging",
+    caption: "IQF frozen coconut, cold-chain handled",
+    category: "Products",
+  },
+  {
+    src: "/images/products/copra.jpg",
+    alt: "Sun-dried whole copra, one cut open",
+    caption: "Milling-grade copra",
+    category: "Products",
+  },
+  {
+    src: "/images/products/watermelons.jpg",
+    alt: "Striped watermelon ripening in the field",
+    caption: "Field-fresh watermelons",
+    category: "Products",
+  },
+  {
+    src: "/images/hero-trade.svg",
+    alt: "Engraving of a cargo ship carrying containers across the sea",
+    caption: "Sea freight — our India-to-UAE route",
+    category: "Exports & Logistics",
+    wide: true,
+  },
+
+  // --- Pending upload: hidden until the files land in /public/images/gallery/ ---
   // Harvesting (10 photos)
   {
     src: "/images/gallery/harvesting-01.jpg",
