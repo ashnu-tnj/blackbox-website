@@ -83,7 +83,7 @@ export const products: Product[] = [
     slug: "watermelons",
     name: "Watermelons",
     category: "Fresh Fruits",
-    image: "/images/products/watermelons.svg",
+    image: "/images/products/watermelons.jpg",
     description:
       "Field-fresh watermelons graded for sweetness and size, cold-chain handled for export markets.",
     specs: [
