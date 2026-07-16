@@ -1,11 +1,10 @@
 /**
  * Photo gallery manifest.
  *
- * To add photos: drop image files into /public/images/ and add an entry here —
- * the Gallery section renders directly from this array. Entries whose image
- * file is not present yet are hidden automatically (the tile's onError removes
- * it), so the "Harvesting / Grading / Container Loading" set below stays
- * invisible until those files are uploaded to /public/images/gallery/.
+ * To add photos: drop image files into /public/images/gallery/ and add an
+ * entry here — the Gallery section renders directly from this array. Any
+ * entry whose image file is missing is hidden automatically (the tile's
+ * onError removes it), so the section never shows a broken thumbnail.
  */
 export type GalleryCategory = "Products" | "Exports & Logistics";
 
@@ -24,236 +23,162 @@ export const galleryCategories: GalleryCategory[] = [
 ];
 
 export const galleryItems: GalleryItem[] = [
-  // --- Live now: real product & logistics imagery already deployed ---
+  // --- Harvest & produce ---
   {
-    src: "/images/products/fresh-pineapples.jpg",
-    alt: "Export-grade pineapples growing in the field",
-    caption: "Field-grown pineapples — Queen variety",
+    src: "/images/gallery/391045.jpg",
+    alt: "Cluster of tender green coconuts fresh from the palm",
+    caption: "Tender green coconuts, fresh from the palm",
+    category: "Products",
+  },
+  {
+    src: "/images/gallery/391022.jpg",
+    alt: "Freshly harvested coconuts spread across the grove floor",
+    caption: "Freshly harvested coconuts at the grove",
     category: "Products",
     wide: true,
   },
   {
-    src: "/images/products/coconuts.jpg",
-    alt: "Fresh semi-husked coconuts, cut to show the white kernel",
-    caption: "Semi-husked coconuts, graded for export",
-    category: "Products",
-  },
-  {
-    src: "/images/products/desiccated-coconut.jpg",
-    alt: "Grated desiccated coconut",
-    caption: "Desiccated coconut, food-manufacturing grade",
-    category: "Products",
-  },
-  {
-    src: "/images/products/frozen-coconut.jpg",
-    alt: "White frozen coconut pieces in packaging",
-    caption: "IQF frozen coconut, cold-chain handled",
-    category: "Products",
-  },
-  {
-    src: "/images/products/copra.jpg",
-    alt: "Sun-dried whole copra, one cut open",
-    caption: "Milling-grade copra",
-    category: "Products",
-  },
-  {
-    src: "/images/products/watermelons.jpg",
-    alt: "Striped watermelon ripening in the field",
-    caption: "Field-fresh watermelons",
-    category: "Products",
-  },
-  {
-    src: "/images/hero-trade.svg",
-    alt: "Engraving of a cargo ship carrying containers across the sea",
-    caption: "Sea freight — our India-to-UAE route",
-    category: "Exports & Logistics",
-    wide: true,
-  },
-
-  // --- Pending upload: hidden until the files land in /public/images/gallery/ ---
-  // Harvesting (10 photos)
-  {
-    src: "/images/gallery/harvesting-01.jpg",
-    alt: "Whole coconuts harvested and piled in the field",
-    caption: "Whole-coconut harvest, ready for processing",
+    src: "/images/gallery/391024.jpg",
+    alt: "Large field pile of semi-husked coconuts",
+    caption: "Harvest pile — semi-husked coconuts",
     category: "Products",
     wide: true,
   },
   {
-    src: "/images/gallery/harvesting-02.jpg",
-    alt: "Workers harvesting coconuts from trees",
-    caption: "Field harvesting of semi-husked coconuts",
+    src: "/images/gallery/391046.jpg",
+    alt: "De-husking yard with coconuts and palms behind",
+    caption: "De-husking yard at the farm",
+    category: "Products",
+    wide: true,
+  },
+  {
+    src: "/images/gallery/391029.jpg",
+    alt: "Pile of mature husked coconuts collected for grading",
+    caption: "Mature coconuts, collected for grading",
     category: "Products",
   },
   {
-    src: "/images/gallery/harvesting-03.jpg",
-    alt: "Pile of freshly harvested coconuts",
-    caption: "Daily harvest collection — semi-husked variety",
-    category: "Products",
-  },
-  {
-    src: "/images/gallery/harvesting-04.jpg",
-    alt: "Workers preparing coconuts for de-husking",
-    caption: "Pre-processing preparation at harvest site",
-    category: "Products",
-  },
-  {
-    src: "/images/gallery/harvesting-05.jpg",
-    alt: "Coconut husking equipment and process",
-    caption: "Traditional husking process",
-    category: "Products",
-  },
-  {
-    src: "/images/gallery/harvesting-06.jpg",
-    alt: "Fresh coconuts in storage bins",
-    caption: "Husked coconuts in temporary storage",
-    category: "Products",
-  },
-  {
-    src: "/images/gallery/harvesting-07.jpg",
-    alt: "Workers inspecting harvested produce",
-    caption: "Quality check at point of harvest",
-    category: "Products",
-  },
-  {
-    src: "/images/gallery/harvesting-08.jpg",
-    alt: "Coconuts transported in open trucks",
-    caption: "Field-to-facility transport",
-    category: "Products",
-  },
-  {
-    src: "/images/gallery/harvesting-09.jpg",
-    alt: "Freshly picked pineapples in field rows",
-    caption: "Pineapple harvest — Queen variety",
-    category: "Products",
-  },
-  {
-    src: "/images/gallery/harvesting-10.jpg",
-    alt: "Workers cutting pineapples from plants",
-    caption: "Hand-harvested pineapples with stems",
+    src: "/images/gallery/391030.jpg",
+    alt: "Semi-husked coconuts beside a woven packing sack",
+    caption: "Semi-husked coconuts, sorted for packing",
     category: "Products",
   },
 
-  // Grading & Sorting (8 photos)
+  // --- Grading & selection ---
   {
-    src: "/images/gallery/grading-01.jpg",
-    alt: "Coconuts on a grading and sorting conveyor line",
-    caption: "Mechanical grading by size and weight",
-    category: "Products",
-    wide: true,
-  },
-  {
-    src: "/images/gallery/grading-02.jpg",
-    alt: "Workers sorting coconuts by quality grade",
-    caption: "Manual quality assessment — shape and surface",
+    src: "/images/gallery/391041.jpg",
+    alt: "Coconuts laid out on the floor for sorting",
+    caption: "Grading and sorting before packing",
     category: "Products",
   },
   {
-    src: "/images/gallery/grading-03.jpg",
-    alt: "Sorted coconuts arranged by grade categories",
-    caption: "Grade A, B, C separation bins",
+    src: "/images/gallery/391038.jpg",
+    alt: "A single coconut on a digital weighing scale",
+    caption: "Weight grading for export selection",
     category: "Products",
   },
   {
-    src: "/images/gallery/grading-04.jpg",
-    alt: "Inspecting coconuts for export specifications",
-    caption: "Compliance verification before boxing",
-    category: "Products",
-  },
-  {
-    src: "/images/gallery/grading-05.jpg",
-    alt: "Pineapples on a sorting conveyor system",
-    caption: "Pineapple size and maturity grading",
-    category: "Products",
-  },
-  {
-    src: "/images/gallery/grading-06.jpg",
-    alt: "Workers quality-checking graded pineapples",
-    caption: "Visual inspection for export quality",
-    category: "Products",
-  },
-  {
-    src: "/images/gallery/grading-07.jpg",
-    alt: "Watermelons being sorted by size categories",
-    caption: "Watermelon grading station",
-    category: "Products",
-  },
-  {
-    src: "/images/gallery/grading-08.jpg",
-    alt: "Temperature-controlled grading facility",
-    caption: "Climate-controlled processing facility",
+    src: "/images/gallery/391050.jpg",
+    alt: "Hand holding a split coconut showing the white kernel",
+    caption: "Split coconut — kernel quality check",
     category: "Products",
   },
 
-  // Packing (2 photos)
+  // --- Processing ---
   {
-    src: "/images/gallery/packing-01.jpg",
-    alt: "Workers packing coconuts into wooden crates",
-    caption: "Export crating — coconuts packed for shipment",
+    src: "/images/gallery/391066.jpg",
+    alt: "Crates of shelled and peeled coconuts during processing",
+    caption: "Shelling and peeling in progress",
     category: "Products",
-    wide: true,
   },
   {
-    src: "/images/gallery/packing-02.jpg",
-    alt: "Packed and sealed export cartons ready for container",
-    caption: "Final boxing and labeling for overseas consignment",
+    src: "/images/gallery/391058.jpg",
+    alt: "Peeled white coconut kernels in a crate at the processing unit",
+    caption: "Peeled kernels at the processing unit",
     category: "Products",
-    wide: true,
+  },
+  {
+    src: "/images/gallery/391063.jpg",
+    alt: "Peeled white coconuts on a stainless-steel processing line",
+    caption: "Kernel processing — stainless line",
+    category: "Products",
+  },
+  {
+    src: "/images/gallery/391065.jpg",
+    alt: "Peeled coconut kernels beside a weighing machine",
+    caption: "Weighing peeled kernels",
+    category: "Products",
+  },
+  {
+    src: "/images/gallery/391053.jpg",
+    alt: "White coconut pieces moving along a processing conveyor",
+    caption: "Coconut pieces on the processing line",
+    category: "Products",
   },
 
-  // Container Loading (8 photos)
+  // --- Product forms ---
   {
-    src: "/images/gallery/container-loading-01.jpg",
-    alt: "Forklift loading packed crates into shipping container",
-    caption: "Loading deck — containerization begins",
+    src: "/images/gallery/391082.jpg",
+    alt: "White coconut chips in a container",
+    caption: "Coconut chips, graded white",
+    category: "Products",
+    wide: true,
+  },
+  {
+    src: "/images/gallery/391098.jpg",
+    alt: "Container of white coconut slices",
+    caption: "Sliced coconut, uniform white grade",
+    category: "Products",
+  },
+  {
+    src: "/images/gallery/391099.jpg",
+    alt: "Tray of diced coconut cubes",
+    caption: "Diced coconut — uniform cut",
+    category: "Products",
+  },
+  {
+    src: "/images/gallery/391086.jpg",
+    alt: "Close-up of finely grated desiccated coconut",
+    caption: "Desiccated coconut — fine grate",
+    category: "Products",
+  },
+  {
+    src: "/images/gallery/391090.jpg",
+    alt: "Freshly grated coconut in a crate, ready for drying",
+    caption: "Freshly grated coconut, ready to dry",
+    category: "Products",
+  },
+
+  // --- Packing, warehousing & dispatch ---
+  {
+    src: "/images/gallery/391014.jpg",
+    alt: "Packing hall with sacks staged for dispatch",
+    caption: "Packing hall — consignments staged for dispatch",
     category: "Exports & Logistics",
     wide: true,
   },
   {
-    src: "/images/gallery/container-loading-02.jpg",
-    alt: "Cargo containers stacked at the loading dock",
-    caption: "Multi-container consignment staged for pickup",
-    category: "Exports & Logistics",
-    wide: true,
-  },
-  {
-    src: "/images/gallery/container-loading-03.jpg",
-    alt: "Inside view of loaded 20ft container",
-    caption: "20ft FCL — organized stacking for stability",
-    category: "Exports & Logistics",
-    wide: true,
-  },
-  {
-    src: "/images/gallery/container-loading-04.jpg",
-    alt: "Workers securing cargo inside the container",
-    caption: "Cargo lashing and bracing for sea transport",
+    src: "/images/gallery/391016.jpg",
+    alt: "Workers bagging fresh coconuts into branded export sacks",
+    caption: "Bagging fresh coconuts for export",
     category: "Exports & Logistics",
   },
   {
-    src: "/images/gallery/container-loading-05.jpg",
-    alt: "Sealed and locked container with customs seal",
-    caption: "Container sealed and documented for customs",
+    src: "/images/gallery/391039.jpg",
+    alt: "Branded 'Fresh Coconut' sacks stacked on a cart, ready to load",
+    caption: "Packed fresh coconuts, ready to load",
     category: "Exports & Logistics",
   },
   {
-    src: "/images/gallery/container-loading-06.jpg",
-    alt: "Warehouse loading dock with multiple containers",
-    caption: "Warehouse loading operations — final stage",
+    src: "/images/gallery/391043.jpg",
+    alt: "Coconuts in 'Product of India' export bags",
+    caption: "Export-bagged coconuts — Product of India",
     category: "Exports & Logistics",
-    wide: true,
   },
   {
-    src: "/images/gallery/container-loading-07.jpg",
-    alt: "Container crane loading cargo onto transport truck",
-    caption: "Crane operations — container to truck transfer",
+    src: "/images/gallery/391056.jpg",
+    alt: "Sacked product stacked and staged for the container",
+    caption: "Sacked product, stacked for the container",
     category: "Exports & Logistics",
-    wide: true,
-  },
-  {
-    src: "/images/gallery/container-loading-08.jpg",
-    alt: "Truck with loaded container leaving the warehouse",
-    caption: "En route to port — ready for sea freight",
-    category: "Exports & Logistics",
-    wide: true,
   },
 ];
