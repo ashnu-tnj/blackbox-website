@@ -1,5 +1,6 @@
 import { Container } from "@/components/ui/Container";
 import { company } from "@/data/company";
+import { BrandMark } from "@/components/ui/BrandMark";
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -10,9 +11,7 @@ export function Footer() {
         <div className="grid gap-10 md:grid-cols-4">
           <div className="md:col-span-1">
             <div className="flex items-center gap-2.5 font-display text-lg font-bold text-white">
-              <span className="grid h-9 w-9 place-items-center rounded-md bg-white/10 font-display text-sm font-bold text-white">
-                BB
-              </span>
+              <BrandMark className="h-9 w-9 text-white" />
               {company.name}
             </div>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-brand-200/80">

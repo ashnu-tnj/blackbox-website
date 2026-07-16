@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { Container } from "@/components/ui/Container";
 import { company } from "@/data/company";
 import { ArrowRightIcon } from "@/components/ui/icons";
+import { BrandMark } from "@/components/ui/BrandMark";
 
 const links = [
   { href: "#products", label: "Products" },
@@ -17,11 +18,9 @@ function Logo() {
   return (
     <a
       href="#top"
-      className="flex items-center gap-2.5 font-display text-lg font-bold tracking-tight text-brand-800"
+      className="group flex items-center gap-2.5 font-display text-lg font-bold tracking-tight text-brand-800"
     >
-      <span className="grid h-9 w-9 place-items-center rounded-md bg-brand-800 font-display text-sm font-bold text-white">
-        BB
-      </span>
+      <BrandMark className="h-9 w-9 text-brand-800 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:rotate-3" />
       {company.name}
     </a>
   );
