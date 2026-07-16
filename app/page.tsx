@@ -12,7 +12,7 @@ import { company } from "@/data/company";
 import { products } from "@/data/products";
 import { faqs } from "@/data/faq";
 
-const BASE_URL = "https://blackboxtraders.in";
+const BASE_URL = "https://www.blackboxtraders.in";
 
 /**
  * Structured data for search and answer engines: Organization, WebSite,

@@ -21,7 +21,7 @@ const description =
   "BlackBox Traders — premium Indian exporter of coconut products (coconuts, desiccated coconut, frozen coconut, copra) and fresh fruits (pineapples, watermelons). DGFT, APEDA, Coconut Board & Spices Board registered, with cold-chain logistics.";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://blackboxtraders.in"),
+  metadataBase: new URL("https://www.blackboxtraders.in"),
   title: {
     default: `${company.name} — Premium Agricultural Exports from India`,
     template: `%s | ${company.name}`,

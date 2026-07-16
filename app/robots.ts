@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const BASE_URL = "https://blackboxtraders.in";
+const BASE_URL = "https://www.blackboxtraders.in";
 
 /**
  * Everything is crawlable. AI/answer-engine crawlers are listed explicitly
