@@ -28,31 +28,43 @@ export function Credentials() {
           ))}
         </div>
 
-        {/* IndiaMART verified-seller callout */}
+        {/* Verified-seller callout — IndiaMART & ExportersIndia */}
         <Reveal delay={100}>
-          <div className="mt-10 flex flex-col items-center justify-between gap-5 rounded-xl border border-line bg-muted p-8 text-center sm:flex-row sm:text-left">
+          <div className="mt-10 flex flex-col items-center justify-between gap-5 rounded-xl border border-line bg-muted p-8 text-center lg:flex-row lg:text-left">
             <div className="flex items-center gap-4">
               <span className="grid h-12 w-12 shrink-0 place-items-center rounded-md bg-brand-700 text-white">
                 <ShieldCheckIcon className="h-6 w-6" />
               </span>
               <div>
                 <p className="font-semibold text-brand-800">
-                  Verified business on IndiaMART
+                  Verified on India&rsquo;s leading trade marketplaces
                 </p>
                 <p className="text-sm text-muted-foreground">
-                  Independently listed and verified marketplace presence.
+                  Independently listed and verified on IndiaMART and
+                  ExportersIndia.
                 </p>
               </div>
             </div>
-            <a
-              href={company.indiamartUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-primary group shrink-0"
-            >
-              View profile
-              <ArrowRightIcon className="h-5 w-5 transition-transform group-hover:translate-x-0.5" />
-            </a>
+            <div className="flex shrink-0 flex-col gap-3 sm:flex-row">
+              <a
+                href={company.indiamartUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary group"
+              >
+                IndiaMART
+                <ArrowRightIcon className="h-5 w-5 transition-transform group-hover:translate-x-0.5" />
+              </a>
+              <a
+                href={company.exportersIndiaUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-outline group"
+              >
+                ExportersIndia
+                <ArrowRightIcon className="h-5 w-5 transition-transform group-hover:translate-x-0.5" />
+              </a>
+            </div>
           </div>
         </Reveal>
       </Container>

@@ -33,6 +33,18 @@ export function TopBar() {
               <ShieldCheckIcon className="h-3.5 w-3.5" />
               IndiaMART Verified
             </a>
+            <span aria-hidden="true" className="text-brand-700">
+              |
+            </span>
+            <a
+              href={company.exportersIndiaUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 font-medium text-accent-400 transition-colors hover:text-white"
+            >
+              <ShieldCheckIcon className="h-3.5 w-3.5" />
+              ExportersIndia
+            </a>
           </div>
         </div>
       </Container>

@@ -58,14 +58,24 @@ export function Footer() {
             <address className="mt-4 text-sm not-italic leading-relaxed text-brand-200/90">
               {company.address}
             </address>
-            <a
-              href={company.indiamartUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-3 inline-flex items-center gap-1.5 text-sm font-medium text-accent-400 hover:text-white"
-            >
-              Verified on IndiaMART
-            </a>
+            <div className="mt-3 flex flex-col gap-1.5">
+              <a
+                href={company.indiamartUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-sm font-medium text-accent-400 hover:text-white"
+              >
+                Verified on IndiaMART
+              </a>
+              <a
+                href={company.exportersIndiaUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-sm font-medium text-accent-400 hover:text-white"
+              >
+                Listed on ExportersIndia
+              </a>
+            </div>
           </div>
         </div>
 

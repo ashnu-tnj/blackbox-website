@@ -12,6 +12,7 @@ export const company = {
   fssai: "12421999000538",
   // Verified marketplace presence
   indiamartUrl: "https://www.indiamart.com/blackbox-traders/",
+  exportersIndiaUrl: "https://www.exportersindia.com/hajeeco/",
   // Contact
   contactPerson: "Mohamed Ashfaaq",
   email: "blackboxtraders@hotmail.com",
