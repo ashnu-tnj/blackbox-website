@@ -27,6 +27,7 @@ function StructuredData() {
     name: company.name,
     description: company.shortDescription,
     url: BASE_URL,
+    logo: `${BASE_URL}/icon.svg`,
     email: company.email,
     foundingLocation: {
       "@type": "Place",

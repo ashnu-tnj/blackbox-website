@@ -8,10 +8,29 @@ import { validateInquiry, hasErrors } from "@/lib/validation";
  * Currently it logs the lead and returns success — wire the marked TODO to an
  * email service (Resend/SendGrid), CRM, or database to deliver inquiries.
  */
+/** Reject anything larger than this outright — the form needs only a few KB. */
+const MAX_BODY_BYTES = 16 * 1024;
+
 export async function POST(request: Request) {
+  const declaredLength = Number(request.headers.get("content-length") ?? 0);
+  if (declaredLength > MAX_BODY_BYTES) {
+    return NextResponse.json(
+      { ok: false, message: "Request too large." },
+      { status: 413 }
+    );
+  }
+
+  const raw = await request.text();
+  if (raw.length > MAX_BODY_BYTES) {
+    return NextResponse.json(
+      { ok: false, message: "Request too large." },
+      { status: 413 }
+    );
+  }
+
   let data: Record<string, unknown>;
   try {
-    data = await request.json();
+    data = JSON.parse(raw);
   } catch {
     return NextResponse.json(
       { ok: false, message: "Invalid request body." },
