@@ -97,6 +97,18 @@ function CredentialCard({ credential }: { credential: Credential }) {
             {credential.reference}
           </p>
         )}
+
+        {credential.href && (
+          <a
+            href={credential.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-accent-700 underline-offset-4 hover:underline"
+          >
+            {credential.linkLabel ?? "View portal"}
+            <ArrowRightIcon className="h-4 w-4" />
+          </a>
+        )}
       </article>
     </Tilt>
   );

@@ -14,6 +14,10 @@ export type Credential = {
   reference?: string;
   /** Path under /public for a verifiable document, if available. */
   document?: string;
+  /** External verification link (e.g. a government portal), if available. */
+  href?: string;
+  /** Label for the external link. */
+  linkLabel?: string;
 };
 
 export const credentials: Credential[] = [
@@ -41,6 +45,14 @@ export const credentials: Credential[] = [
     name: "Spices Board of India",
     description:
       "Registered exporter under the Ministry of Commerce & Industry, Govt. of India.",
+  },
+  {
+    abbr: "MEA",
+    name: "India–USA Trade Portal, Ministry of External Affairs",
+    description:
+      "Registered on the Government of India's India–USA trade portal for bilateral trade facilitation.",
+    href: "https://indiausatrade.mea.gov.in/",
+    linkLabel: "View portal",
   },
   {
     abbr: "GSTIN",

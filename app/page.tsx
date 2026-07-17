@@ -47,7 +47,11 @@ function StructuredData() {
       email: company.email,
       availableLanguage: ["en"],
     },
-    sameAs: [company.indiamartUrl, company.exportersIndiaUrl],
+    sameAs: [
+      company.indiamartUrl,
+      company.exportersIndiaUrl,
+      "https://indiausatrade.mea.gov.in/",
+    ],
     taxID: company.gstin,
     knowsAbout: [
       "coconut export",

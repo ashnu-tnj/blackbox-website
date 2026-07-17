@@ -25,7 +25,7 @@ export const faqs: Faq[] = [
   {
     question: "What certifications and registrations does BlackBox Traders hold?",
     answer:
-      "BlackBox Traders is registered with DGFT (Directorate General of Foreign Trade), APEDA, the Coconut Development Board, and the Spices Board of India. The company is FSSAI-licensed (12421999000538), GST-registered (GSTIN 33AANFB9273H2Z5), and listed as a verified business on IndiaMART and ExportersIndia.",
+      "BlackBox Traders is registered with DGFT (Directorate General of Foreign Trade), APEDA, the Coconut Development Board, and the Spices Board of India, and is registered on the Ministry of External Affairs' India–USA trade portal. The company is FSSAI-licensed (12421999000538), GST-registered (GSTIN 33AANFB9273H2Z5), and listed as a verified business on IndiaMART and ExportersIndia.",
   },
   {
     question: "Can I order a trial quantity before committing to full containers?",

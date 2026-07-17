@@ -6,7 +6,14 @@ import { company, stats } from "@/data/company";
 import { ArrowRightIcon } from "@/components/ui/icons";
 import { Tilt } from "@/components/fx/Tilt";
 
-const registrations = ["DGFT", "APEDA", "Coconut Board", "Spices Board", "FSSAI"];
+const registrations = [
+  "DGFT",
+  "APEDA",
+  "Coconut Board",
+  "Spices Board",
+  "MEA India–US Trade",
+  "FSSAI",
+];
 
 /** Decorative leaf drawn in the site's engraving style. */
 function Leaf({ className }: { className?: string }) {
