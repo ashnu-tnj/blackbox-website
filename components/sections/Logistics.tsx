@@ -3,6 +3,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ShipIcon, SnowflakeIcon, GlobeIcon } from "@/components/ui/icons";
 import { Tilt } from "@/components/fx/Tilt";
 import { Reveal } from "@/components/fx/Reveal";
+import { company } from "@/data/company";
 
 const capabilities = [
   {
@@ -86,9 +87,38 @@ export function Logistics() {
                   India&rsquo;s first sea shipment of fresh pineapples to the UAE.
                 </p>
                 <p className="mt-3 text-brand-200">
-                  A milestone we&rsquo;re proud to have delivered — and the
-                  foundation of our cold-chain sea-freight capability.
+                  Carried out by {company.name} — the flag-off ceremony of the
+                  sea shipment of GI Vazhakulam pineapple from Cochin to Dubai,
+                  with top officials from APEDA and VFPCK present.
                 </p>
+
+                <dl className="mt-6 space-y-3 border-t border-white/10 pt-5 text-sm">
+                  {[
+                    {
+                      k: "Implemented by",
+                      v: "Vegetable & Fruit Promotion Council Keralam (VFPCK)",
+                    },
+                    {
+                      k: "Technical guidance",
+                      v: "Pineapple Research Station, KAU",
+                    },
+                    {
+                      k: "Supported by",
+                      v: "Agriculture & Processed Food Products Development Authority (APEDA)",
+                    },
+                    { k: "Flag-off", v: "6 November 2025 · Cochin → Dubai" },
+                  ].map((row) => (
+                    <div
+                      key={row.k}
+                      className="flex flex-col gap-0.5 sm:flex-row sm:gap-3"
+                    >
+                      <dt className="shrink-0 font-semibold text-brand-300 sm:w-40">
+                        {row.k}
+                      </dt>
+                      <dd className="text-brand-100">{row.v}</dd>
+                    </div>
+                  ))}
+                </dl>
               </div>
               <Tilt max={5} scale={1.01} className="rounded-lg">
                 <figure className="overflow-hidden rounded-lg border border-white/10 bg-white">
@@ -101,8 +131,8 @@ export function Logistics() {
                     className="h-auto w-full"
                   />
                   <figcaption className="bg-brand-950 px-4 py-2.5 text-xs text-brand-200">
-                    Flag-off ceremony — sea shipment of GI Vazhakulam pineapple,
-                    Cochin to Dubai.
+                    Flag-off ceremony, 6 November 2025 — sea shipment of GI
+                    Vazhakulam pineapple, Cochin to Dubai.
                   </figcaption>
                 </figure>
               </Tilt>
