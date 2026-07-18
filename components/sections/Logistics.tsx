@@ -91,16 +91,20 @@ export function Logistics() {
                 </p>
               </div>
               <Tilt max={5} scale={1.01} className="rounded-lg">
-                <div className="animate-float-soft overflow-hidden rounded-lg border border-white/10 bg-white">
+                <figure className="overflow-hidden rounded-lg border border-white/10 bg-white">
                   <img
-                    src="/images/hero-trade.svg"
-                    alt="Line engraving of a cargo ship carrying containers across the sea"
-                    width={1200}
-                    height={460}
+                    src="/images/logistics/pineapple-flagoff.jpg"
+                    alt="Flag-off ceremony of the sea shipment of GI Vazhakulam pineapple from Cochin to Dubai"
+                    width={1800}
+                    height={953}
                     loading="lazy"
                     className="h-auto w-full"
                   />
-                </div>
+                  <figcaption className="bg-brand-950 px-4 py-2.5 text-xs text-brand-200">
+                    Flag-off ceremony — sea shipment of GI Vazhakulam pineapple,
+                    Cochin to Dubai.
+                  </figcaption>
+                </figure>
               </Tilt>
             </div>
           </div>
