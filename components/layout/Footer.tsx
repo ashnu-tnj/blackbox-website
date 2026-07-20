@@ -1,6 +1,7 @@
 import { Container } from "@/components/ui/Container";
 import { company } from "@/data/company";
 import { BrandMark } from "@/components/ui/BrandMark";
+import { YoutubeIcon } from "@/components/ui/icons";
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -40,12 +41,20 @@ export function Footer() {
               Get in touch
             </h3>
             <ul className="mt-4 space-y-2 text-sm text-brand-200/90">
-              <li className="font-medium text-brand-100">
-                {company.contactPerson}
-              </li>
               <li>
                 <a href={`mailto:${company.email}`} className="hover:text-white">
                   {company.email}
+                </a>
+              </li>
+              <li>
+                <a
+                  href={company.youtubeUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 hover:text-white"
+                >
+                  <YoutubeIcon className="h-4 w-4" />
+                  YouTube
                 </a>
               </li>
             </ul>
