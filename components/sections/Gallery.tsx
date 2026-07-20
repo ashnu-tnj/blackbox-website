@@ -98,7 +98,7 @@ export function Gallery() {
         </div>
 
         {/* Grid */}
-        <ul className="mt-10 grid grid-cols-2 gap-4 sm:gap-5 lg:grid-cols-4">
+        <ul className="mt-10 grid grid-flow-dense grid-cols-2 gap-4 sm:gap-5 lg:grid-cols-4">
           {visible.map((item, i) => (
             <li
               key={item.src}
