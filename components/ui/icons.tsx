@@ -71,6 +71,13 @@ export const ArrowRightIcon = (p: IconProps) => (
   </Base>
 );
 
+export const YoutubeIcon = (p: IconProps) => (
+  <Base {...p}>
+    <path d="M2.5 12c0-2.4.2-3.9.5-4.8a2.6 2.6 0 0 1 1.8-1.8C6 5 8.4 4.8 12 4.8s6 .2 7.2.6a2.6 2.6 0 0 1 1.8 1.8c.3.9.5 2.4.5 4.8s-.2 3.9-.5 4.8a2.6 2.6 0 0 1-1.8 1.8c-1.2.4-3.6.6-7.2.6s-6-.2-7.2-.6a2.6 2.6 0 0 1-1.8-1.8c-.3-.9-.5-2.4-.5-4.8Z" />
+    <path d="m10 9.5 5 2.5-5 2.5Z" />
+  </Base>
+);
+
 export const DocumentIcon = (p: IconProps) => (
   <Base {...p}>
     <path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8Z" />

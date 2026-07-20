@@ -181,4 +181,31 @@ export const galleryItems: GalleryItem[] = [
     caption: "Sacked product, stacked for the container",
     category: "Exports & Logistics",
   },
+
+  // --- GI Vazhakulam pineapple export (Cochin → Dubai) ---
+  {
+    src: "/images/gallery/20251105_105715.jpg",
+    alt: "Farm Fresh GI Vazhakulam Pineapple cartons labelled with BlackBox Traders as exporter",
+    caption: "GI Vazhakulam pineapple cartons, labelled for export",
+    category: "Exports & Logistics",
+  },
+  {
+    src: "/images/gallery/20251105_113725(0).jpg",
+    alt: "Refrigerated truck stacked full of pineapple export cartons",
+    caption: "Reefer truck loaded with pineapple consignment",
+    category: "Exports & Logistics",
+  },
+  {
+    src: "/images/gallery/20251106_112515.jpg",
+    alt: "Team with crated pineapples and export cartons at the KAU Pineapple Research Station, Vazhakulam",
+    caption: "With the KAU Pineapple Research Station team, Vazhakulam",
+    category: "Exports & Logistics",
+    wide: true,
+  },
+  {
+    src: "/images/gallery/20251106_182641.jpg",
+    alt: "Flag-off ceremony banner on the truck for the sea shipment of GI Vazhakulam pineapple from Cochin to Dubai",
+    caption: "Flag-off — GI pineapple sea shipment, Cochin to Dubai",
+    category: "Exports & Logistics",
+  },
 ];

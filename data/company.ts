@@ -13,8 +13,9 @@ export const company = {
   // Verified marketplace presence
   indiamartUrl: "https://www.indiamart.com/blackbox-traders/",
   exportersIndiaUrl: "https://www.exportersindia.com/hajeeco/",
+  // Social media
+  youtubeUrl: "https://www.youtube.com/@blackbox.traders",
   // Contact
-  contactPerson: "Mohamed Ashfaaq",
   email: "blackboxtraders@hotmail.com",
   location: "Thanjavur, Tamil Nadu, India",
   address:
