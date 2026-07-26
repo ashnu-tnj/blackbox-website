@@ -17,11 +17,11 @@ export function TopBar() {
             </a>
           </div>
           <div className="flex items-center gap-5">
-            <span className="text-brand-200/80">
+            <span className="hidden text-brand-200/80 lg:inline">
               GSTIN{" "}
               <span className="font-mono tabular-nums">{company.gstin}</span>
             </span>
-            <span aria-hidden="true" className="text-brand-700">
+            <span aria-hidden="true" className="hidden text-brand-700 lg:inline">
               |
             </span>
             <a
@@ -44,6 +44,18 @@ export function TopBar() {
             >
               <ShieldCheckIcon className="h-3.5 w-3.5" />
               ExportersIndia
+            </a>
+            <span aria-hidden="true" className="text-brand-700">
+              |
+            </span>
+            <a
+              href={company.tradeIndiaUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 font-medium text-accent-400 transition-colors hover:text-white"
+            >
+              <ShieldCheckIcon className="h-3.5 w-3.5" />
+              TradeIndia
             </a>
           </div>
         </div>

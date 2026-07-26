@@ -40,8 +40,8 @@ export function Credentials() {
                   Verified on India&rsquo;s leading trade marketplaces
                 </p>
                 <p className="text-sm text-muted-foreground">
-                  Independently listed and verified on IndiaMART and
-                  ExportersIndia.
+                  Independently listed and verified on IndiaMART,
+                  ExportersIndia, and TradeIndia.
                 </p>
               </div>
             </div>
@@ -62,6 +62,15 @@ export function Credentials() {
                 className="btn-outline group"
               >
                 ExportersIndia
+                <ArrowRightIcon className="h-5 w-5 transition-transform group-hover:translate-x-0.5" />
+              </a>
+              <a
+                href={company.tradeIndiaUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-outline group"
+              >
+                TradeIndia
                 <ArrowRightIcon className="h-5 w-5 transition-transform group-hover:translate-x-0.5" />
               </a>
             </div>

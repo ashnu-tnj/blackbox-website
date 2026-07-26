@@ -13,6 +13,7 @@ export const company = {
   // Verified marketplace presence
   indiamartUrl: "https://www.indiamart.com/blackbox-traders/",
   exportersIndiaUrl: "https://www.exportersindia.com/hajeeco/",
+  tradeIndiaUrl: "https://www.tradeindia.com/black-box-traders-7985606/",
   // Social media
   youtubeUrl: "https://www.youtube.com/@blackbox.traders",
   // Contact

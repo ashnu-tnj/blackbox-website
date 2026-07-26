@@ -84,6 +84,14 @@ export function Footer() {
               >
                 Listed on ExportersIndia
               </a>
+              <a
+                href={company.tradeIndiaUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-sm font-medium text-accent-400 hover:text-white"
+              >
+                Listed on TradeIndia
+              </a>
             </div>
           </div>
         </div>
