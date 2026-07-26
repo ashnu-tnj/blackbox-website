@@ -50,6 +50,8 @@ function StructuredData() {
     sameAs: [
       company.indiamartUrl,
       company.exportersIndiaUrl,
+      company.tradeIndiaUrl,
+      company.youtubeUrl,
       "https://indiausatrade.mea.gov.in/",
     ],
     taxID: company.gstin,

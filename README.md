@@ -29,7 +29,7 @@ components/
   sections/ Hero, Products, Logistics, Credentials, InquiryForm
   ui/       Container, SectionHeading, icons (inline SVG, no emoji)
 data/                   ← edit these to update content (no component changes needed)
-  company.ts            Identity, contact, trust stats, GSTIN/FSSAI, IndiaMART URL
+  company.ts            Identity, contact, trust stats, GSTIN/FSSAI, marketplace URLs
   products.ts           Product catalogue + specifications
   credentials.ts        Certifications & verifiable documents
 lib/
