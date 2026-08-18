@@ -17,7 +17,7 @@ export const company = {
   // Social media
   youtubeUrl: "https://www.youtube.com/@blackbox.traders",
   // Contact
-  email: "blackboxtraders@hotmail.com",
+  email: "info@blackboxtraders.in",
   location: "Thanjavur, Tamil Nadu, India",
   address:
     "S-16, SIDCO Industrial Estate, Nanjikottai Road, Thanjavur 613007, Tamil Nadu, India",

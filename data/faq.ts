@@ -40,6 +40,6 @@ export const faqs: Faq[] = [
   {
     question: "How do I get an export quotation from BlackBox Traders?",
     answer:
-      "Submit the trade inquiry form on this page with your company name, destination port, product requirement, and volume — or email blackboxtraders@hotmail.com. Verified business inquiries receive pricing, specifications, and shipping options within 1–2 working days.",
+      "Submit the trade inquiry form on this page with your company name, destination port, product requirement, and volume — or email info@blackboxtraders.in. Verified business inquiries receive pricing, specifications, and shipping options within 1–2 working days.",
   },
 ];
